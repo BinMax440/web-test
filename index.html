@@ -1,1669 +1,220 @@
-
+```html
 <!DOCTYPE html>
-<html lang="de_DE">
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="apple-itunes-app" content="app-id=808689139">
-
-    	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-
-    <script>
-      const BUILDING_TYPE_GUARD_DOG_UNIT = -1000;
-const BUILDING_TYPE_BOMB_DISPOSAL = -1;
-const BUILDING_TYPE_CLINIC = -1;
-const BUILDING_TYPE_COASTAL_RESCUE_SMALL = -1;
-const BUILDING_TYPE_COMMERCE_POLICE = -1;
-const BUILDING_TYPE_CUSTOMS_HELIPORT = -1;
-const BUILDING_TYPE_FEDERAL_POLICE_STATION = -1;
-const BUILDING_TYPE_FIRE_AVIATION_STATION = -1;
-const BUILDING_TYPE_FIRE_BOAT_DOCK = -1;
-const BUILDING_TYPE_FIRE_INVESTIGATION = -1;
-const BUILDING_TYPE_HAZARD_RESPONSE_EMS = -1;
-const BUILDING_TYPE_HOME_RESPONSE_LOCATION = -1;
-const BUILDING_TYPE_MUNICIPAL_POLICE = -1;
-const BUILDING_TYPE_POLICE_BOAT_DOCK = -1;
-const BUILDING_TYPE_POLICE_DEPOT = -1;
-const BUILDING_TYPE_RESCUE_BOAT_DOCK = -1;
-const BUILDING_TYPE_TECHNICAL_AID = -1;
-const BUILDING_TYPE_WATER_RESCUE_2 = -1;
-const BUILDING_TYPE_SWAT = -1;
-const BUILDING_TYPE_SWAT_AIRPORT = -1;
-const BUILDING_TYPE_TOW_TRUCKS = -1;
-const BUILDING_TYPE_GENERAL_PRACTITIONER = -1;
-const BUILDING_TYPE_FEUERWACHE = 0;
-const BUILDING_TYPE_FEUERWEHRSCHULE = 1;
-const BUILDING_TYPE_RETTUNGSWACHE = 2;
-const BUILDING_TYPE_RETTUNGSSCHULE = 3;
-const BUILDING_TYPE_HOSPITAL = 4;
-const BUILDING_TYPE_NOTARZTHUBSCHRAUBERLANDEPLATZ = 5;
-const BUILDING_TYPE_POLIZEIWACHE = 6;
-const BUILDING_TYPE_LEITSTELLE = 7;
-const BUILDING_TYPE_POLIZEISCHULE = 8;
-const BUILDING_TYPE_THW = 9;
-const BUILDING_TYPE_THW_BUNDESSCHULE = 10;
-const BUILDING_TYPE_BEREITSCHAFTSPOLIZEI = 11;
-const BUILDING_TYPE_SEG = 12;
-const BUILDING_TYPE_POLIZEIHUBSCHRAUBERLANDEPLATZ = 13;
-const BUILDING_TYPE_BEREITSTELLUNGSRAUM = 14;
-const BUILDING_TYPE_WASSERRETTUNG = 15;
-const BUILDING_TYPE_POLIZEIZELLE = 16;
-const BUILDING_TYPE_POLIZEISONDEREINHEITEN = 17;
-const BUILDING_TYPE_FEUERWACHE_KLEINWACHE = 18;
-const BUILDING_TYPE_POLIZEIWACHE_KLEINWACHE = 19;
-const BUILDING_TYPE_RETTUNGSWACHE_KLEINWACHE = 20;
-const BUILDING_TYPE_RESCUE_DOG_UNIT = 21;
-const BUILDING_TYPE_COMPLEX = 22;
-const BUILDING_TYPE_COMPLEX_SMALL = 23;
-const BUILDING_TYPE_POLICE_HORSE = 24;
-const BUILDING_TYPE_MOUNTAIN_RESCUE = 25;
-const BUILDING_TYPE_COASTAL_RESCUE = 26;
-const BUILDING_TYPE_WATER_RESCUE_SCHOOL = 27;
-const BUILDING_TYPE_WATER_RESCUE_HELIPORT = 28;
-const BUILDING_TYPE_WERKFEUERWEHR = -2;
-      OTHER_BUILDING_ICONS = {
-0: '/images/building_fire_other.png',
-1: '/images/building_fireschool_other.png',
-2: '/images/building_rescue_station_other.png',
-3: '/images/building_rettungsschule_other.png',
-4: '/images/building_hospital_other.png',
-5: '/images/building_helipad_other.png',
-6: '/images/building_polizeiwache_other.png',
-7: '/images/building_leitstelle_other.png',
-8: '/images/building_polizeischule_other.png',
-9: '/images/building_thw_other.png',
-10: '/images/building_thw_school_other.png',
-11: '/images/building_bereitschaftspolizei_other.png',
-12: '/images/building_seg_other.png',
-13: '/images/building_helipad_polizei_other.png',
-14: '/images/building_bereitstellungsraum_other.png',
-15: '/images/building_wasserwacht_other.png',
-16: '/images/building_polizeiwache_other.png',
-17: '/images/building_polizeisondereinheiten_other.png',
-18: '/images/building_fire_other.png',
-19: '/images/building_polizeiwache_other.png',
-20: '/images/building_rescue_station_other.png',
-21: '/images/building_rescue_dog_unit_other.png',
-22: '/images/building_complex_other.png',
-23: '/images/building_complex_other.png',
-24: '/images/building_police_horse_other.png',
-25: '/images/building_mountain_rescue_other.png',
-26: '/images/building_coastal_rescue_other.png',
-27: '/images/building_coastal_rescue_school_other.png',
-28: '/images/building_water_rescue_heliport_other.png',
-}
-
-    </script>
-    <script src="/assets/application-54e486a93033e50eb810c20a832f6fcc.js" type="text/javascript"></script>
-
-    <meta name="description" content="Leitstellenspiel.de - Der kostenlose Feuerwehr Simulator! In diesem realistischen Feuerwehrspiel koordinierst du Feuerwehr, Polizei und THW in spannenden Einsätzen." />
-
-
-    <title>LEITSTELLENSPIEL.DE - Baue deine eigene Leitstelle!</title>
-    <meta content="authenticity_token" name="csrf-param" />
-<meta content="kw1go3FCfGOMXQPtn8nYPSevBa8rqJgUTHqu58MJgwU=" name="csrf-token" />
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
-    <![endif]-->
-
-    <link href="/assets/application-f5c2974eb24c1122f61b11891d93c7ba.css" media="all" rel="stylesheet" type="text/css" />
-
-
-
-
-    <!-- For all other devices -->
-    <!-- Size should be 32 x 32 pixels -->
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    
-
-    <script>
-      gameFlavour = "missionchief";
-      i18nPrefix = "";
-    </script>
-
-			<script>
-				var user_id = 3095453;
-				var username = "jojorohra";
-					var alliance_id = 57690;
-			</script>
-
-
-    <script type="text/javascript"> //Set language
-        I18n.defaultLocale = "de_DE";
-        I18n.locale = "de_DE";
-      check_and_initialize_locale_compare('de');
-    </script>
-
-      <script>
-    $(window).on('load', function() {
-      check_and_enable_apng_support();
-    });
-  </script>
-
-
-      <script type="text/javascript">
-          $(document).ready(function(){
-              dynamicLayouter.init();
-              window.addEventListener("resize", dynamicLayouter.resize);
-          });
-      </script>
-
-		
-
-
-  <script type="text/javascript">
-      var subscriptions = [];
-      var faye = new Faye.Client('/faye');
-
-      faye.on('transport:down', function (message) {
-          if (mobile_version == 4) {
-              mobileBridgeAdd("faye_down", {});
-          }
-      });
-
-      faye.on('transport:up', function (message) {
-          if (mobile_version == 4) {
-              mobileBridgeAdd("faye_up", {});
-          }
-      });
-
-
-      faye.addExtension({
-          outgoing: function (message, callback) {
-              if (message.channel !== '/meta/subscribe')
-                  return callback(message);
-
-              message.ext = message.ext || {};
-
-              message.ext["/private-user3095453de_DE"] = "2cc3f745e86a43bd3e21338e47d445cd895da215";
-              message.ext["/private-alliance/81b00913-7d5e-4508-8997-673e8d67b655/de_DE"] = "95bc260959bd77aabcfb2e53a8ccd5abacb3eeba";
-              message.ext["/allde_DE"] = "0289114d2c0dd331cafa5013ca86a2b35c3b3daa";
-
-              callback(message);
-          }
-      });
-
-
-      subscriptions.push(faye.subscribe('/private-user3095453de_DE', function (data) {
-          eval(data);
-      }));
-      subscriptions.push(faye.subscribe('/private-alliance/81b00913-7d5e-4508-8997-673e8d67b655/de_DE', function (data) {
-          eval(data);
-      }));
-      subscriptions.push(faye.subscribe('/allde_DE', function (data) {
-          eval(data);
-      }));
-  </script>
-
-  </head>
-  <body class="
-
-
-
-
-
-
-    missionchief
-		">
-
-		  <div class="" id="col_navbar_holder">
-				<nav id="main_navbar" style="" class="navbar navbar-default navbar-static-top wintereventbar">
-	<div class="trauerflor"></div>
-		<div class="container-fluid">
-			<div class="navbar-header">
-          <div class="money-block-web money-block">
-            <a href="/credits" class="lightbox-open">
-              <img class="navbar-icon" src="/images/mc_credits_flat.png">
-              <span class="credits-value"></span>
-</a>            <a href="/coins" class="lightbox-open" id="coins_top_mobile">
-              <img class="navbar-icon" src="/images/mc_coins_flat.png">
-              <span class="coins-value"></span>
-                <span class='glyphicon glyphicon-plus btn btn-xs btn-success'></span>
-</a>          </div>
-	      <button id="main-navbar-toggle" type="button" class="navbar-toggle collapsed "
-                data-toggle="collapse" data-target="#navbar-main-collapse" aria-expanded="false">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-
-          <a class="navbar-brand hidden-xs" href="/">
-              <img src='/images/logo-header.png' class="logoSmall">
-          </a>
-
-    </div>
-    <div class="collapse navbar-collapse" id="navbar-main-collapse">
-      <ul class="nav navbar-nav navbar-right">
-
-
-
-
-
-            <form class="navbar-form navbar-left" id="map_adress_search_form">
-              <div class="form-group">
-                <input type="text" class="form-controls" id="map_adress_search" placeholder="Ort suchen...">
-
-                <div class="arrow_box" id="arrow_location_select">Wo willst du spielen?</div>
-              </div>
-            </form>
-
-            <li class="" id="restore_map" style="display:none;">
-              <a href="#">Karte wiederherstellen</a>
-            </li>
-
-
-
-
-              <li class="dropdown" id="news_li">
-                <a href="#" id="news" role="button" class="dropdown-toggle" data-toggle="dropdown" >
-                  <img alt="News" class="navbar-icon" src="/images/google_news_ffffff.svg" title="News" />
-                  <span class='visible-xs'>News</span>
-                  <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="news">
-                    <li role="presentation">
-    <a href="https://forum.leitstellenspiel.de" class="social-navbar-link" target="_blank">
-      <img alt="Forum-white" class="nav-icon social-media-nav-icon" src="/images/socials/forum-white.svg" />
-      Forum
-</a></li>  <li role="presentation">
-    <a href="https://blog.leitstellenspiel.de/blog/" class="social-navbar-link" target="_blank">
-      <img alt="Blog-white" class="nav-icon social-media-nav-icon" src="/images/socials/blog-white.svg" />
-      Blog (Neuigkeiten)
-</a></li>  <li role="presentation">
-    <a href="https://www.facebook.com/Leitstellenspiel.de" class="social-navbar-link" target="_blank">
-      <img alt="Facebook-white" class="nav-icon social-media-nav-icon" src="/images/socials/facebook-white.svg" />
-      Facebook (Neuigkeiten)
-</a></li>  <li role="presentation">
-    <a href="https://www.instagram.com/leitstellenspiel/" class="social-navbar-link" target="_blank">
-      <img alt="Instagram-white" class="nav-icon social-media-nav-icon" src="/images/socials/instagram-white.svg" />
-      Instagram
-</a></li>  <li role="presentation">
-    <a href="https://www.tiktok.com/@leitstellenspiel.de" class="social-navbar-link" target="_blank">
-      <img alt="Tiktok-white" class="nav-icon social-media-nav-icon" src="/images/socials/tiktok-white.svg" />
-      TikTok
-</a></li>  <li role="presentation">
-    <a href="https://t.me/LeitstellenspielBot" class="social-navbar-link" target="_blank">
-      <img alt="Telegram-white" class="nav-icon social-media-nav-icon" src="/images/socials/telegram-white.svg" />
-      Telegram
-</a></li>  <li role="presentation">
-    <a href="https://twitter.com/_LSS_DE" class="social-navbar-link" target="_blank">
-      <img alt="Twitter-white" class="nav-icon social-media-nav-icon" src="/images/socials/twitter-white.svg" />
-      Twitter
-</a></li><script>
-  $(document).ready(function() {
-    if (mobile_bridge_use) {
-      var $externalLinks = $('.social-navbar-link');
-      $externalLinks.unbind()
-      $externalLinks.click(function (e) {
-        e.preventDefault();
-        mobileBridgeAdd("openExternalURL", {"url": $(this).attr('href')});
-      });
-    }
-  });
-</script>
-
-                </ul>
-              </li>
-
-
-          <li class="dropdown">
-            <a href="#" id="menu_profile" role="button" class="dropdown-toggle " data-toggle="dropdown">
-
-              <img alt="Profile" class="navbar-icon" src="/images/profile.svg" title="Profil" />
-
-              <span class='visible-xs'>
-                Profil
-              </span>
-              <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="menu_profile">
-              <li role="presentation">
-              <a href="/profile/3095453" class="lightbox-open" id="navbar_profile_link" role="menuitem"><img class="icon icons8-Contacts" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADtElEQVRoQ+2ZgVEUQRBF/49AiECNQIlAiECJQI1AjECIQIxAiECIQI1AiECIQI2grYczVXN7u7e7MwuUVUzVVS11N7P9p7t/d3+s/3z5P7dfDwC6HoyIl5Kep89W+v63pG+STm3zvNhazAMR8UHSG0lPNliH8e9tnyyFoBlARHDLX9ONY9e5pDNJV5LybfMbwL1OhuONE9unrUCWAPAjGX8paXdTiEQEIA4lPc5AbO+1gGgCEBEHkj5KurRN3E9aEbEr6VjSM0lHtgFVtVoB/Ewxv2P7Yo4FEUGusJ8we1qb3NUAIoIbJ3xm3X4JMiJIZvJi3zZ5M3u1AHgl6YukT7YJpdmrCMHqMGoBQNxCndUvT7kAg323TV7MXg8AGj0ArX5uOaPFA7gc97fkQHMYtgDILFQdvxEB89A77dmmOs9e1QB4U0QEPG57e/ab/+3/JWnLdrUd1RsTgJZClmn4wvZOzQWwpxpA6mtIwNEeqM+4VAgJIfqi2ZU8n9kCoDkBIyKfcS+VOFMgQwrPs9e9JnGnGTu2fTQHQRqA8MAfGsI7b+ZSEud2mj+3pxpRNILse9syoVXnQL7tmo6yIIDqIticxAWATIfntnkeXRFBBaeSVxewxQCkUGL+hQ5HDSo60GvbmwSA0YtoqgPl6UVfDxA4vVc6SQIAQxCGN8X+oh7oeAHj8cTKiJkSl8JHD7XI7S/mgQSAZuxF4RnGxaz/UCfKWtGcvLfhgQwAXYgOs7vge37Dd9VTXPfQZhot2CgDQOchF2CkPCbeCFkpfGCgyYw1lsmLAEjxjWEocEgkAFhbRQHrzZMxY/u+bwYQEe+S2obxo31R0f8A4qBVXqwCkOgQPYdWouTyOTSaL5Q9qHRVyvUsAKmBQ0ohvrN0zjxAUwYYWAj6pD1eCaO0Fx0JGiXRyQn2IS+y8AjzAQw1WeWbBCDFLhpoqd1gBF3ozSybvMJzNghjsiEYnduMlQEoVWbAl8zFOcjwo0BGARRtL3ZChbgbaXwtURMIjOHzqJN0eS+g1yp18hC1otx7ONambwQQEVTOXIDo93tfPsA4eCvnx9VU1aG4BEKVdWZ7f4ihBgFEBDcNw1zj/inurKHBoT2dmXmwcvcCKDpGzq8euFsBdQaf3k53CECWvRfrWWrBFJHQW2OGANwITvd5+0WLkhXAXgFtDUAxrHNGldxXe9sb9mX6Xpu7+wBk0fYW7Gg+ci0P+gAQOpP/Ydds0rwDkCFXashoIZt3/t3/+gHA3d/56hv/AupftUBIKYE8AAAAAElFTkSuQmCC" width="24" height="24"> jojorohra</a></li>
-
-                <li role="presentation"><a href="/tasks/index" class="lightbox-open">
-                  <div class = 'tasks_and_events_navbar'>
-                    <img class="icon icons8-Share" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NCIgaGVpZ2h0PSI0MiIgdmlld0JveD0iMCAwIDQ0IDQyIj48Zz48Zz48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDQ0djQySDB6bTQyIDQwVjJIMnYzOHpNMTIgOGgyNXYySDEyem0wIDhoMjV2MkgxMnptMCA4aDI1djJIMTJ6bTAgOGgyNXYySDEyek02IDZoMnYxaDF2Mkg4djFINlY5SDVWN2gxem0wIDloMnYxaDF2Mkg4djFINnYtMUg1di0yaDF6bTAgOGgydjFoMXYySDh2MUg2di0xSDV2LTJoMXptMCA4aDJ2MWgxdjJIOHYxSDZ2LTFINXYtMmgxeiIvPjwvZz48L2c+PC9zdmc+" width="24" height="24">
-                    Aufgaben und Events
-                    <span id = 'completed_tasks_counter' class = 'badge message_new'>
-                    </span>
-                  </div>
-                </a></li>
-
-								<li role="presentation"><a href="/level" class="lightbox-open"><!-- Medal First Place icon by Icons8 -->
-<img class="icon icons8-Medal-First-Place" src="data:image/png;base64,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" width="24" height="24"> Dienstgrad: <span id='current_level'>Gruppenführer(in)</span></a></li>
-								<li role="presentation"><a href="/auszeichnungen" class="lightbox-open"><!-- Medal icon by Icons8 -->
-<img class="icon icons8-Medal" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAD/0lEQVRoQ+2Z61FVMRCAdysQKlAqUCtQKhAqUCpQKxAqECoQKlArECpQK1AqECpY52N2mXjueWxyc2b4YWYYBm5ust++k6gkh5m9FJFvyenbTLsRkUNVvcwsoplJzDGzYxH5kJ2/5bwTVWW/xdECkF58cffBhEJJ6T3+A9RqeW7+2haIIL5U1f2egsdaZkaSYJ/97kHsgfxbRB6LyHtVPe0JYWYkCAL3WlWfZNdOx4ADlKmUNAfIj+xmY/PM7JmIfHTN3/K7Zs0qAIdgwy9uCf517iDk7/Qwsx0X/I1/6VpEDmqE53vVAIW/Yu53IvJIRBD+WFXPMgRm9tbdBQi0fprN+8P1mwHcGvgqIK99YWLkaCoAvZrjLliRceHgfK9pbAVQWIPYAOSF/w8XIz7uBDMzQBH8wD//ifWymWaOrAtAAYJLIWiM6GfQOO7C6JrB1gYYU146x2d8qjdANHxXIjLsJsk21JAHDYCQn0TkTFVxp/thZt89eB80AMH6y9PqsMAR6LeqGrGQ8ZDFOV1dyDPOMJBDCPI9hSp1UFmU3Cd0ByjSJpYox16k1axwmXlrAUQwU6ioBTRqF6oabUNGttSc7gDe46B9fH3P4wEIWo7uVlgD4F77ofHioNLdCl0BhtovWgmssYoVegNsaL9oMyY/Szn7xKRuAFPaLwCwwh//e1dVq84PU5A9ARY1bGYcfmi909cmS9apBvAjIBmFyopW6TTLbnMy03hbHfUBC1CtiQ1+KHBU6qoj6iKAC0weR8i5w3bqZGVmVGqshRKmBkCAYKlZoAwAGisFp9MM7bH4TWt74Ce0sCJ78IOiAo59sOhkvMwCFCZHI897Bd6SX3tC4FTHCW+2e81YIO6CzlX1aGnzHp+bWbTlLIfiJt0oA4BJCTDMujrEQHguCMhck2MRwLtLIFjoqQcXZu2Sx0vJaoXnuykAhyDYsMQqEC3CVwGsCeEXXXHXuug2pdXSFhi0BN0sYWacoQla6gh3RbM+PwyGaoARS3xV1biwqkpCxbtb9aVubNQE4BCTNxBZigLgSlVpTarHNgDRvFX57FBCMzOv5rvV0tdkoZGNiYPFSrkklJlFoWw6bm5jAXr7HVVtXsNdkZbh1VLLMKWIps29VwFg9jnIeykgJ1uBloe9rdKoay2emkaDzwWnBY9rFNyN1njjUsvMyGCfW69dWi0Qt2//nKzcMry+8Hm8vtBycKnL2ADx8wb3pk2ZqBWAqomgdxloRHCE5VKLwnTjbQJZaxTEM5G0xFMrQGSgQ++NQuMhOO9lG89GIyBU3RNvFMlo1Yf9VoA4nJfxlHrvcmsBHA+EsUbTzXUrAP6NGxHMWGNU43M1oAAh0ImTpjezvyNf+kBtWIANAAAAAElFTkSuQmCC" width="24" height="24"> Auszeichnungen</a></li>
-								<li role="presentation"><a href="/premiumaccount" class="lightbox-open"><img class="icon icons8-Best-Seller" src="/images/premium_light.png" width="24" height="24"> Premium Account</a></li>
-								<li role="presentation"><a href="/users/edit" class="lightbox-open"><img class="icon icons8-Edit" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAB20lEQVRoQ9WZ7U3DMBCG33cDRigb0A26ASMAG7ABMAEwAWWDbgAjdAPaCSgTHLrIiRzjhCSN7YulSvlRtc/j+4h0Ryz8cOH8MCsgIisADwBu3SWfALwAeCWpz9UxKSAiVwA+AFxEMmRPcm1dQG/9rSe9n0g+mouASxuQPIhIn0QTBTMp5KXNieSl3m6fBMmK3YRAkPNapPd1+nRIHElqkZcXCODfSdZdpymBiETzvaIRGAIficQPgFXdSosJjIEPJLSA90Xb6Bh4EdF2ugGw9l9gxQQmwGtNtNLGfz9kTaEz4Dd+2hQRSAGfrY2mgs8ikBI+uUBq+KQCOeCTCeSCTyKQE352gdzwswqUgJ9NoBT8LAIl4c8WKA1/loAF+MkCVuAnCViCHy1gDX6UgEX4wQJW4QcJWIb/V8A6fK/AEuA7BZYCHxVYEvwfARHRjciX24xEB63emE8nZvXQqXNu489wUjy3BlveFPhQz+hjf+rGfcXhYxHYArhx0FuSd6GAJfiYgKZPtTiISViDbwm4/ZQKhKeKhEX4UEDXOs8dhXZwkdEpcbGCjbE1RSwiOwDXPZ3CHHwYge/IYvkI4NN9drEFQ4rWOOY3/QjU63sfWFPH9Mm64EhxE4sX+AUfFbxAQ/gyUwAAAABJRU5ErkJggg==" width="24" height="24"> Account bearbeiten</a></li>
-								<li role="presentation"><a href="/referrals" class="lightbox-open"><img class="icon icons8-Share" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAEi0lEQVRoQ82ajXHUQAyFpQqACkgqgFQAVECoAFIBpAKSCoAKSCoIVEBSAVABSQWQCsR8G8mz3rPXPzmfszMZztz6rCc9SW91p/JAlpntichbEXkpIs9F5LGI/BORXyLyTUTOVZXr1tK17TczDP0kIu8GbMH4z6p6mu9bFYCZ4emv7vFbDMTbqorX0zIzIgI4osO6FJE3EY3VALjnf4oI1PmOkV0UyYCwDyo9A4SqvuK9NQH8cL7D7SH6RDSgGxEAxKmqnqwCwGkBgBvoU/N8mRee7H88wffXAnDmnD5SVV5PWmYW9x+vBeCvl8knU7xfJDYRvNo5AE9eAFypKhVm1jIzE5HrNQB8FJETGpSqHsyy/q68AmB3VcjMqOMYTjlk/VZV+sCs5QBuF49Ah+FXIvIieU911vO9AdJDlsuBHsNPVPXSzGhIr72j8nrSMjM69vvUCybdOWJzzfCsitC4kBCT88CLAH2AptbfB3wjXgrO8vxrrx7821pjDM9vMDP0TtNRR/gmbTGzVgffiIB3OipFrb3Tzmnl0KFMTjieqFIzynnMnkcicqaqRwP78ThRO6QAIEPoIS0AZobRSFs2ow7hJ97mQVQMosEHPPWH8V5EaJTh7kU+Hw5/8Gfx30QE4Ai7ZmVMiAqG/DgMxdoAcONByEJzo703DhBuAEBJJLzHHuRt1eMVw8/dOdApVv5ZebPDSRjf2JUAZOKKS4wZrAwFBY5VFUCdy71YehzD8XjKJ3cg0SXv8hVMgGYbTgoAZDVUqBpSWpfVYzyyX0ZsjOFdiD0P98ZEVc0M1BdztUmmDJM+H6BK4/Fawk55DwD3lbZEjgiShJySqlSZYtyYvQCgJVNhZklb9zgUioSmwrBaHB9jzJw9ALhTdTN1iQMguZK+2ZXhAXYJAFCSfNjo1nM8PHQPAKKl34dCccKi5EEl1k6AbCOJyR/yKLV376502J0AyctoM2sZClv+fqWMAmJxINHIgkZTGxkeRx1CHRpPS3p4I5sMxBsZeotTW6ecaZLYq0gYwuUUKYHxlM0xUqIKxFUtTZW/fAEghrvdUsJBxCGDSzrql4qYo1mxJybIU8RcFxDyKD8fI9piRXnmujUXTeW/4HOpMvvkdEhopG1I6+aMMJRDPdSiCCA1WkLS9xIVHMazKM84LA2A+w40bI5pcJc9jfZ3FRkfHl5Kh50aEBeCQcFGR/Xd40AozajVJFs2DjRFNKAHyMsjJdWq60hJ9EYDySTMoPGFXTEQSEPhJQ71g0Cyw9Pk2ZBHAgfSZ5Yb7tao9aDHKiWHe4CkY+JcAbmTwdYIINsY7ranEkPlbxvvmxmJzthmGwB2N9wN8Fser99svQqNiZKZxQluloTPpijLDXcHmth9z+Grf8UU4pF6fjCkOItGFuePOwU8JuRL7DGzOEcPzkWL/EF+AGK9r1ld/SJV0DQINOQB31j2av/iW/2mgq0WAQeBJ+Ezc1GM5zUaJ/+pAXIaeRLT8tZ8dFUAWSSYq9bUL1vTbyli+he0Wh1Axm9UL16On9sg1jhvkOhQjFzZoNh/QgWV9UBZruQAAAAASUVORK5CYII=" width="24" height="24"> Spiel weiterempfehlen</a></li>
-								<li role="presentation"><a href="/note" class="lightbox-open"><img class="icon icons8-Share" src="/images/note.svg" width="24" height="24"> Notizen</a></li>
-
-                <li role="presentation" class="divider"></li>
-								<li role="presentation"><a href="/aaos" class="lightbox-open"><img class="icon icons8-Parallel-Tasks" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACdElEQVRoQ+1Y4VEWMRTcrUA7UCtQK1AqECoQK1ArUCvQErACoQKhAqECoAOsYJ09L9/kvrnL5buEuQ8m748MHsnbfXm7LyEeePCB548GYO0Ktgo8qgpIeg7g2QyoW5I3tYBXO0KSfgE4zEzslORR5rfJz6oAkPQJwHcAtwDm2A1V+kzyRymIWgDOAbwBcEDSP0+GpLcAfgM4I5lbscn11gRwQdJgiqIBMH2SlhyhVgGTt+YR2qsmDjJqCc2RUUvp/sho3wenAN5lSkoV9qsdoZB0P0qY3RDWe8dB9LubvRwlxpiXpI4lskqvje1xbwv3x6oBmOup2QpIeg/gGIDPdny+59Yu+f+gZickf6YWSgKQ5CYsnldKkAA4JxmLwGC5SQCSPOp+7Edk67wXutslmaVNLOlpT5xz8AXpG8mvOzVx2BzAi6WytxTAlixfp5RstALRzF40cJUCyBkUG4BUT7QKZNw1Hs8RkuRLeYhXACxhlwAsoSGuUlI68i4ULvixlyTfhXoJfRnt6Tycj/NwPl2QvOj+7Te1YeW67OgcX+NdKHqeybEbgzkygDDHXwGYMyoz8QTAa5IbNmq8C0ny2n8A/I2ZnkBio3OVzgwge2KUZDf8sn2bWnipH1xqIhImXTcGs8l7IYDBJgsBDEwyIqcBmGygKZZaBf4bVuivez1CYcQeSOnCClRr4iCjlsUcGbWETcno4nehSEadw0aiEzJq2e1k1AZmELH7pYzkA8mT7Q8iP8kxodF3oR2NzL51uJmFegbMbiouM0aJOUdPvgv1o4TZTcVdMNLZS30OnWt+0wCsyX43ja6dQOn+DUApg6V//w9nDeu8G6YaTwAAAABJRU5ErkJggg==" width="24" height="24"> Alarm und Ausrückeordnung</a></li>
-								<li role="presentation"><a href="/settings/index?mission_speed=true" class="lightbox-open"><img class="icon icons8-Running-Rabbit" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAFWUlEQVRoQ8WZgVUUQQyGkwrECsQKlAqUCoQKhArECsQK1AqECpQKhAqECoQK1Ari+9ZkX25ud29mb4F57x4c7M3kT/78SeZUFlxm9lZEXovIS3/l3f+IyLWIXIrIhary+9ZLt95BRMxsR0S+ufG1W96KyJmIfFFVwM1aSwE4EZFPInIjIp/xdOlhB0lkDvz1LFl8OhfIUgCgxSsR2VdVft+4zAyqHYkItGMRkePaz8cBSwGAChiC8UTgKtPCzHZFJDx+p6oY2y0zIyp8BgewAMF+VWspAOQASZlpUWPA90hqj8aHVhArAApPbTKg9CQgoAQcD2/GHuRGTtQckXiGPPjrucTfquhYAvgtIhhSs25UlfDPWp7U5AGAIw8AeeHv+R1KElkoh/SuqVUJADVhw5p11sLVqQ098vA+Ikckngx8Bsq9zzm0SA7UoN30jKvSD3/uMFEORkSkyDGiQKIDRjoAHk7COEafW1U932RE/N/M8OTf2mrr5//y80dVyMxQq3cOghy5DgAkUCjAmJ2jSeUtBNTDU6UTgst4DHntJTQBjvPPVRUhGF1mFs+SG/s5AvB/bBGBNW02M4ymAqMqse486XhPkpdcBgivLimd/z8deJXymFkUzuNZOeAh/5oS/sqL0WWpFP5sRIefQ8kJ2Env+z7Qh7NwGOdfqJnxxzHu/1HVLzksvhHJhndRi4Pa8p/AAITPk5REjOh+nmrqzIyovXH+74kIOXMNAJvinKqWUkvXiQEUp9fbdJK1ouBCEwmMOOyE3QDAE1MR6Pt25zwA8PzuQxmfkh2RoNMldzrHN+WAmRE2+FeVbC0eLmjKGTtjMuxUpGuoB2BmyBuJgxTiiXtbSWXGulskHzm9mIwASIMmZhYtc1O7mwol4FGpFVEY8kICkP9N/aCm5P7rcA2A5wTanr2M8SQuufK0lfu+J1rPQk1wwugYmQDQUhB5bMnyS8OHal2WCgO6OIjD0NzcGncKMIc73uvgCKSTSOyP7WNmXVecFdB5LyXwEgD6Dtq+qPgHkTB6pa3473vB6xc+Aw9Wf1cY5o1c4QfxlgD+S9O69sfERdgAM3slOkGh5wOVG6NRuypn9QCSNNH3PJ9tYcUHkyDQ2684JKndR1VFaSZXGQEyHY6equrHVEDwCmUcas2+wykKEnSloVsZoBK4qlpTAoD/MVQAhhf0Cen6rqoow1YrDS8rNElzASyuEosxGSV0eDwWfQ8bEh2UhNDPjsQEgOj1ua2bau97w1oKGVFAQdBjjAcI7xnu14aUqRAlAD2FiqmM5K7as7UXIhfy8B125otb8mTy8DRV9YlqZtHlViVvHNwEICUh0SBf4iY6X2gBpptXJwpVNIWdp80s3602teizAJSGpYtbDAm1Gpxtk7FdAifZpEXH+KZr90UApMhMDudFT8RURXWPZD2Mq5IWiVsMQPIk569puA9DdKSoGTWGHgsKzvL8VjkwQKFcP9ba7ZS0fBSKdAOLj6VHrbTJ5y8SganWgMNG+nvmAir+7HrC3ksDoK9BBleM8rufuLmmE2XxDM1h37K0cH9pCuUiF8bFrTLtBwNItwa+0OA5aNekPosCSIahQuX0xL+7L/SKBpHniBgR2Vg7xqKzCIWGNvd2gWSl24y+Ci8jl12lLoalWSDuDUAGVdz/Y+he8T1ZXBhw50N9qF4PAiDxvzfUa0Wf7GYWs0jTrceDAigklZw4TuBm3Ts9BgDyglygLV/xdn9dWMzkU3x6cAAehfA2b6EVtYOuNGh0P/NAdWZVPOi9EzI69H1B9eXZo0Qg8R46Re1gpqCxO2n59vNRAVQEauMj/wB1O7MgfWB4cAAAAABJRU5ErkJggg==" width="24" height="24"> Einsatz-Geschwindigkeit</a></li>
-								<li role="presentation" id='graphic_packs'><a href="/vehicle_graphics" class="lightbox-open"><!-- Picture icon by Icons8 --><img class="icon icons8-Picture" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAChElEQVRoQ+2Z7XETMRiEdyuADiAVBCogqQCoIKQCSAekAkgFhA7oAKcCkgqACggVLLM3Os9ZuQ/JvhtLwZrxH/t82kfvpySi8sHK9aN+AEmvarYCJemxANxUBtJ4ztoCJKuKh9ZzNgAkPQVwXLgl7kjeDwGcAPheOMApydUUwG8A14WBvAPwDEASwA1JW6OYIWkFwIF7ANiLVQ4WWGrZJZ0BeA7gnuTV0DxFWkDSZwDvO6JvSb7sgygOQJJX/WeP2Lckv8XfLwYgyfn5NYBzV8hUV5M0VDQvSNoyG2MRgCD+S5jpNuToHAg/+yTSekTy1+IAkizcq+/hyu0quSJ5mmGFFwDsLv7vXwAfSPZ2ALNaoCPekxrCVdIWsJBrkuepEH7OTeSU+80GEIk/IWnhFuHVNIhdIhtiCnhngNBqu1O1UK/8Wnw7eQRxSfLjlLDU33cCiMTb39+0K98TbAb8Eb53Zpqlq90aIBJ/F1Z+NNNE2WkQIjz3KbjcxZg1tgIILmG38U4tSXzHnRzcbYptWuCuwAjSP43GTTaAU1rYnVm8N/x2m+QcHwLb7/AK+3+GaAO+C3cZ5hoN/lwAFxIL9+cryTbfp8bc+jlJjgE3bA1ESAKtZRr3SslguQCtgJ3Ed9ypC+FF8diIjSmIbQCuSNoFZhkdAQ/ED6ThjZjIBZh1T5yalcYK4t4AcsSPWWKfAH9CMsgqanFMADjay6mEJMeRt4vZFTmCaA1U17FKD0RdAD2BXR9AgPi/TubcSmQH3SwVb/glbmd8kpHkQgtr2en1owDuU7whKXn48Kv/gqNk1bG2BxccYUNeE0Nzf/EorlmLuonJdYGqrlb74A4AuSaf+/l/zZY/Nx3TRV0AAAAASUVORK5CYII=" width="24" height="24"> Grafikset</a></li>
-
-              <li role="presentation" class="divider"></li>
-              <li role="presentation"><a href="/settings/index" class="lightbox-open"><img class="icon icons8-Settings" src="/images/icons8-settings.svg" width="24" height="24"> Einstellungen</a></li>
-              <li role="presentation"><a href="/users/sign_out" data-method="delete" id="logout_button" rel="nofollow"><img class="icon icons8-Logout-Rounded-Up-Filled" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAERklEQVRoQ9Waj3HVMAzGpQmACaATABNAJwAmoEwAGwATABNQJoBOAJ0AmIB2AmACcb9gv1MUO07ynDvwXa/X92JZn/RZ/1KV/3zpXvqb2ZmIvEnyn6nqpz3O2gVAUv59UBgQ571BdAdQUT7r3R1EVwAN5XcB0Q3AQuW7g2gCMLObInJXRK5V9arE4ZXKN0HkM1X1snVnZgEkQZ9F5J6I/BKRU1X95oVWlP8tIjfC4aXPJnfCzO6IyFcRwXCcxZmcXVxVAEH5vPm1qr7Kf5jZQxEBoF8oyuco4dd9EflSAIaCfD4sM0P+S7dxFsQcABTA8n498fHczN6KyHP3wKA8XjIz8xtVVc0MeRFENMpjEfkYzv2iqqclFxQBFBRj7ztVfTFDn4PyyZITAOnzCKJEI/LF06Dw5Hy+nwCo0OKDqpJZJyvdAXh77i95yQOOJjyPvG+1DG1mJRAjuk0AJN5DHQ7I61JV4fSqNQdgiaCkC3QjAuYFYO7SYY08ULhA0OLOXBSoKXMsgEQ3DMkl9hFtRLkDgIT4RwpfWa/RBVtiOUeT4h1YIyOBiFHpSlVPshwPAE76AozE5am06uweHkgAcj647RQ4eMEDIJ57rh9VePUCkEBE416oKuH2bxRK9PkZTHxrC/d7U6ilXwZQRbiKN+7hnh5IIIhID9wRQ1LNAGJGPYo+6cAul9h5lCSaOzw+HgJMBhDRndQqz6Ue2cEDse4a8lMGAP+57cOiblmq6J55wMsu3NMhqWUAXd29B4VqMksANpUO0RO9KZQA0BccsjJM2RMA3VtOPr2MMirxawB+qeqtDneAspnohtVexU5ui/ySV3e7A1sUbO0JAIZSZ7cw2lJm7fepm/Nt6iiMxuZh1DquPWyP5wvDg1Eii6VEtQPbQ7klMgsd2qiUoGymF8iry0VeotjSZ8xslGxFZCg2fTlN5+Pbt3+GRgX6HMKyBxCLpUn/udRavZ8zM9jhm6tiQ0MtRPKp9p+9FVsir2D9UZ/eauoBdP+YxmaJkjMFIUad7dMjgJIXmPc8O0aRrXvNjAnd0Dqmdc200Bu0NNiKIZW9m6cTRygf7ySiJoGlNlrkfdajcPjRXdpSMJWJdzE31QBApTgV43yKstdLFdnynJkxmT5MwJOM72loPBmzz02nS5Nk5OEdvFGd2W9UHKMxl/KcR9SE915+6wVHDQTKv1DVD1uUjXvMjEk0pfehrXWX9vFcKd7sfdMbE6zus3TWgTCLuxk0rfJI6nG5Z+wvTQCrtFnsgfxgOgwLxZm9lwVIfphdFt9tpZIYQzBhgCrR4lkensXDTaM0PeA1NDMOBYifU86xCA+hRHzTU9sD38/8K6cWRVcBQFjyBjGan/gir3XenOIkzBh9mvJWAwi0wiMkPj/yax7qHriAdsf8C8JmAIFacBleQxV+cykjzaAHlCK/ULrz4q7J8ZY1ugBoHbLn938A/w4tTxquMSkAAAAASUVORK5CYII=" width="24" height="24"> Logout</a></li>
-            </ul>
-          </li>
-
-          <li class="dropdown" id="alliance_li">
-            <a href="#" id="menu_alliance" role="button" class="dropdown-toggle" data-toggle="dropdown">
-              <img alt="Alliance" class="navbar-icon" src="/images/alliance.svg" title="Verband" />
-              <span class='visible-xs'>
-                Verband
-              </span>
-
-
-              <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="menu_alliance">
-              <li role="presentation" class="alliance_true"><a href="/verband" class="lightbox-open">Verband anzeigen</a></li>
-              <li role="presentation" class="alliance_true"><a href="/verband/news" class="lightbox-open">News <span class='badge badge-success' style='display:none' id='alliance_news_new'>NEU</span></a></li>
-              <li role="presentation" class="alliance_true"><a href="/verband/mitglieder" class="lightbox-open">Mitglieder</a></li>
-
-                <li role="presentation" class="alliance_true"><a href="/verband/regeln/57690" class="lightbox-open">Regeln</a></li>
-
-                <li role="presentation" class="alliance_true"><a href="/alliance_logfiles" class="lightbox-open">Protokoll</a></li>
-
-              <li role="presentation" class="alliance_true"><a href="/alliance_threads" class="lightbox-open">Forum <span class='badge badge-success' style='display:none' id='alliance_forum_new'>NEU</span></a></li>
-
-              <li role="presentation" class="alliance_true"><a href="/alliance_messages" class="lightbox-open">Nachrichten <span class='badge badge-success' style='display:none' id='alliance_message_new'>NEU</span></a></li>
-
-              <li role="presentation" class="alliance_true"><a href="/verband/werbung" class="lightbox-open">Bewerben</a></li>
-
-              <li role="presentation" class="alliance_true"><a href="/schoolings" class="lightbox-open">Lehrgänge</a></li>
-              <li role="presentation" class="alliance_true"><a href="/verband/bereitstellungsraume" class="lightbox-open">Bereitstellungsräume</a></li>
-
-                <li role="presentation" class="alliance_true"><a href="/verband/kasse" class="lightbox-open">Verbandskasse</a></li>
-
-                <li role="presentation" class="alliance_true"><a href="/verband/gebauede" class="lightbox-open">Gebäude</a></li>
-
-              <li role="presentation" class="alliance_true"><a href="/verband/bewerbungen" class="lightbox-open">Bewerbung <span id='alliance_candidature_count'></span></a></li>
-
-
-              <li role="presentation" class="alliance_false"><a href="/alliances/new" class="lightbox-open">Verband gründen</a></li>
-
-              <li role="presentation" class="divider"></li>
-              <li role="presentation"><a href="/alliances" class="lightbox-open">Verbandsliste</a></li>
-              <li role="presentation"><a href="/verband/location" class="lightbox-open">Verbandsfinder</a></li>
-              <li role="presentation" class="divider"></li>
-              <li role="presentation">
-                <a href="/freunde" class="lightbox-open"><img alt="User_group" class="navbar-icon" src="/images/user_group.svg" title="Freunde" /> <span>Freunde</span></a>
-              </li>
-            </ul>
-          </li>
-
-            <li id="daily-bonus" class="">
-              <a href="/daily_bonuses" class="lightbox-open">
-                <span style="margin-right: 2px;" class="glyphicon glyphicon-calendar "></span>
-                <span id="daily-bonus-description">Täglicher Login</span>
-</a>            </li>
-
-            <li title="Credits">
-              <a href="/credits" class="lightbox-open" id="navigation_top">
-                <img class="navbar-icon" style="margin-right: 2px;" src="data:image/png;base64,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">
-                <span class="credits-value"></span>
-</a>            </li>
-            <li title="Coins">
-              <a href="/coins" class="lightbox-open" id="coins_top">
-                <img class="navbar-icon" style="margin-right: 2px;" src="data:image/png;base64,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">
-                <span class="coins-value"></span>
-</a>            </li>
-
-          <li><a href="/messages" class="lightbox-open "><img alt="Nachrichten" class="navbar-icon" src="/images/message_ffffff.svg" title="Nachrichten" /><span id='message_top' class='badge'></span></a></li>
-
-
-
-
-            <li class="dropdown" id="help_menu">
-              <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
-                <img alt="Hilfe-Menü" class="navbar-icon" src="/images/icons8-help.svg" />
-                <span class="visible-xs">Hilfe-Menü</span>
-                <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="https://forum.leitstellenspiel.de" class="mixed-mobile-desktop-external-link" target="_blank">Forum</a></li>
-                <li><a href="https://xyrality.helpshift.com/a/mission-chief/?p=web" class="mixed-mobile-desktop-external-link" target="_blank">FAQ</a></li>
-                <li><a href="https://wiki.leitstellenspiel.de/index.php?title=Hauptseite" class="mixed-mobile-desktop-external-link" target="_blank">Wiki / Tutorials</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="/toplist" class="lightbox-open">Toplist</a></li>
-                <li><a href="/einsaetze" class="lightbox-open">Mögliche Einsätze</a></li>
-                <li><a href="/impressum">Impressum</a></li>
-                <li><a href="/agb">AGB</a></li>
-                <li><a href="/datenschutz">Datenschutz</a></li>
-              </ul>
-            </li>
-      </ul>
-    </div>
-  </div>
-  <div class="sale-countdown-block"></div>
-</nav>
-
-<script>
-  $(document).ready(function() {
-    $('[data-toggle="tooltip-navbar"]').tooltip({
-      delay: { show: 750, hide: 100 },
-      trigger: 'hover focus click',
-    });
-
-    if (mixed_mobile_desktop_mode) {
-      var $externalLinks = $('.mixed-mobile-desktop-external-link');
-      $externalLinks.unbind()
-      $externalLinks.click(function(e) {
-        e.preventDefault();
-        mobileBridgeAdd("openExternalURL", { "url": $(this).attr('href') });
-      })
-    }
-  });
-</script>
-
-
-
-			</div>
-
-          
-	    <div class="container-fluid" id="main_container">
-
-
-        <div class="alert fade in alert-danger "><button class="close" data-dismiss="alert" type="button">&times;</button>Du bist bereits angemeldet.</div>
-        
-
-<script>
-	$(function(){
-
-
-
-		if (typeof(mapkit) != "undefined"){
-			mapkit.init({
-					authorizationCallback: function(done) {
-						var xhr = new XMLHttpRequest();
-            xhr.open("GET", "/mapkittoken");
-            xhr.addEventListener("load", function() {
-                done(this.responseText);
-            });
-            xhr.send();
-					}
-				});
-
-
-
-				const coordinate = new mapkit.Coordinate(47.991056157343486, 7.830339468838897);
-
-
-				const span = new mapkit.CoordinateSpan(0.1, 0.1);
-				const region = new mapkit.CoordinateRegion(coordinate, span);
-				map = new mapkit.Map('map', {
-					region: region,
-					showsUserLocationControl: true,
-					showsScale: mapkit.FeatureVisibility.Visible,
-					mapType: mapkit.Map.MapTypes.Standard
-				});
-
-				var mapTimerLastScoll = Date.now();
-
-				map.addEventListener("region-change-end", map_moved);
-				map.addEventListener("zoom-end", zoom_change);
-
-
-				map.addEventListener("map-type-change", function() {
-
-					var newType = -1;
-
-					if (map.mapType == mapkit.Map.MapTypes.Standard)
-					{
-							newType = 1;
-					}
-
-					if (map.mapType == mapkit.Map.MapTypes.Hybrid)
-					{
-							newType = 3;
-					}
-					if (map.mapType == mapkit.Map.MapTypes.Satellite)
-					{
-							newType = 2;
-					}
-					$.ajax({
-						url: "/profile/map_type?map_type=" + newType,
-						type: "GET",
-						success: function ()
-						{
-
-						},
-					});
-				});
-
-				map.element.addEventListener("wheel", mapMouseWheel);
-
-				function mapMouseWheel(e) {
-
-
-					var e = window.event || e;
-					var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail || e.deltaY * -1)));
-
-					if (delta == 0)
-					{
-						e.preventDefault();
-						return true;
-					}
-
-					if (mapTimerLastScoll > Date.now() - 50)
-					{
-						e.preventDefault();
-						return true;
-					}
-
-
-					mapTimerLastScoll = Date.now()
-
-					 if (!this.actSize) this.actSize = 1;
-
-					 var currentRegion = map.region;
-
-					 var latitude = parseFloat(currentRegion.span.latitudeDelta);
-					 var longitude = parseFloat(currentRegion.span.longitudeDelta);
-
-					 var originalLongitudeDelta = longitude;
-
- 					 var mapCoordinate = map.center;
-
-
-
-					 var diffLatitude = 0;
-					 var diffLongitude = 0;
-
-
-					 var mousePosition = { x: e.pageX, y: e.pageY };
-
-					 var dompoint = new DOMPoint(mousePosition.x, mousePosition.y);
-					 var mouseCoordinate = map.convertPointOnPageToCoordinate(dompoint);
-
-						diffLatitude = (mouseCoordinate.latitude - mapCoordinate.latitude) / 8;
-						diffLongitude = (mouseCoordinate.longitude - mapCoordinate.longitude) / 8;
-
-
-					 var newLatitude = diffLatitude + mapCoordinate.latitude;
-					 var newLongitude = diffLongitude + mapCoordinate.longitude;
-
-					 if (delta > 0)
-					 {
-						 longitude = longitude - (longitude / 8);
-
-
-
-
-					 }
-					 else
-					 {
-						 longitude = longitude  + (longitude / 4);
-
-	 					 newLatitude = mapCoordinate.latitude - (diffLatitude * 2);
-	 					 newLongitude = mapCoordinate.longitude - (diffLongitude * 2);
-
-					}
-
-
-					 var coordinate = new mapkit.Coordinate(parseFloat(newLatitude.toFixed(4)), parseFloat(newLongitude.toFixed(4)));
-					var span = new mapkit.CoordinateSpan(0.001, parseFloat(longitude.toFixed(4))); // latitude delta, longitude delta
-					var region = new mapkit.CoordinateRegion(coordinate, span);
-
-					 map.region = region;
-
-					 // -- Region hat sich nicht verändert
-					 if (parseFloat(map.region.span.longitudeDelta) == originalLongitudeDelta)
-					 {
-						 if (delta > 0)
-						 {
-							 longitude = longitude - (longitude / 2);
-						 }
-						 else
-						 {
-							 longitude = longitude  + (longitude / 2);
-						}
-
-
-						var span = new mapkit.CoordinateSpan(0.001, parseFloat(longitude.toFixed(4))); // latitude delta, longitude delta
-						var region = new mapkit.CoordinateRegion(coordinate, span);
-
-						 map.region = region;
-
-
-
-					 }
-
-
-
-					 e.preventDefault();
-
-					 return false;
-				}
-
-		} else {
-			map = L.map('map').setView([47.991056157343486, 7.830339468838897], 13);
-
-  L.tileLayer('https://{s}/{z}/{x}/{y}.png', {
-			    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors',
-			    subdomains: ['maps.missionchief.com/tile'],
-			    maxZoom: 17,
-			    noWrap: true,
-			}).addTo(map);
-
-
-        map_filters_service.initialize(
-          {
-            user_id: 3095453,
-            sorted_map_filters: [{"filter_id":"all_buildings","text":"Gebäude","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_fire.png"},{"filter_id":"user_buildings","text":"Meine Gebäude","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_fire.png"},{"filter_id":"firehouse","text":"Feuerwache","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_fire.png"},{"filter_id":"fire_school","text":"Feuerwehrschule","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_fireschool.png"},{"filter_id":"ambulance_station","text":"Rettungswache","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_rescue_station.png"},{"filter_id":"hospital","text":"Krankenhaus","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_hospital.png"},{"filter_id":"police_station","text":"Polizeiwache","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_polizeiwache.png"},{"filter_id":"police_copter_station","text":"Polizeihubschrauberstation","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_helipad_polizei.png"},{"filter_id":"police_school","text":"Polizeischule","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_polizeischule.png"},{"filter_id":"staging_area","text":"Bereitstellungsraum","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_bereitstellungsraum.png"},{"filter_id":"rescue_copter_station","text":"Rettungshubschrauber-Station","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_helipad.png"},{"filter_id":"dispatch_center","text":"Leitstelle","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_leitstelle.png"},{"filter_id":"rapid_deployment_group","text":"Schnelleinsatzgruppe (SEG)","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_seg.png"},{"filter_id":"riot_police","text":"Bereitschaftspolizei","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_bereitschaftspolizei.png"},{"filter_id":"police_special_forces","text":"Polizei-Sondereinheiten","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_polizeisondereinheiten.png"},{"filter_id":"technical_aid_organization","text":"THW","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_thw.png"},{"filter_id":"technical_aid_organization_school","text":"THW Bundesschule","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_thw_school.png"},{"filter_id":"water_watch","text":"Wasserrettung","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_wasserwacht.png"},{"filter_id":"rescue_school","text":"Rettungsschule","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_rettungsschule.png"},{"filter_id":"rescue_dog_unit","text":"Rettungshundestaffel","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_rescue_dog_unit.png"},{"filter_id":"complex","text":"Gebäudekomplex","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_complex.png"},{"filter_id":"coastal_rescue","text":"Seenotrettungswache","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_coastal_rescue.png"},{"filter_id":"water_rescue_school","text":"Schule für Seefahrt und Seenotrettung","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_coastal_rescue_school.png"},{"filter_id":"water_rescue_heliport","text":"Hubschrauberstation (Seenotrettung)","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_water_rescue_heliport.png"},{"filter_id":"horse_stable","text":"Reiterstaffel","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_police_horse.png"},{"filter_id":"mountain_rescue","text":"Bergrettungswache","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_mountain_rescue.png"},{"filter_id":"alliance_buildings","text":"Verbandsgebäude","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_fire.png"},{"filter_id":"alliance_members","text":"Gebäude von Verbandsmitgliedern","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_fire.png"},{"filter_id":"all_missions","text":"Einsätze","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_fire.png"},{"filter_id":"user_missions","text":"Meine Einsätze","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_fire.png"},{"filter_id":"firehouse_missions","text":"Feuerwache","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_fire.png"},{"filter_id":"police_station_missions","text":"Polizeiwache","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_polizeiwache.png"},{"filter_id":"rapid_deployment_group_missions","text":"Schnelleinsatzgruppe (SEG)","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_seg.png"},{"filter_id":"riot_police_missions","text":"Bereitschaftspolizei","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_bereitschaftspolizei.png"},{"filter_id":"ambulance_station_missions","text":"Rettungswache","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_rescue_station.png"},{"filter_id":"technical_aid_organization_missions","text":"THW","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_thw.png"},{"filter_id":"water_watch_missions","text":"Wasserrettung","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_wasserwacht.png"},{"filter_id":"factory_fire_brigade_missions","text":"Werkfeuerwehr","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_fire.png"},{"filter_id":"coastal_rescue_missions","text":"Seenotrettungswache","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_coastal_rescue.png"},{"filter_id":"mountain_missions","text":"Bergrettung","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_mountain_rescue.png"},{"filter_id":"alliance_missions","text":"Vom Verband freigegeben","checked":true,"icon_url":"https://www.leitstellenspiel.de/images/building_fire.png"},{"filter_id":"pois","text":"Points of Interest (POIs)","checked":false,"icon_url":"https://www.leitstellenspiel.de/images/letter_p.png"}],
-            building_types_collection: {"0":"firehouse","1":"fire_school","2":"ambulance_station","3":"rescue_school","4":"hospital","5":"rescue_copter_station","6":"police_station","7":"dispatch_center","8":"police_school","9":"technical_aid_organization","10":"technical_aid_organization_school","11":"riot_police","12":"rapid_deployment_group","13":"police_copter_station","14":"staging_area","15":"water_watch","17":"police_special_forces","21":"rescue_dog_unit","22":"complex","23":"complex","24":"horse_stable","25":"mountain_rescue","26":"coastal_rescue","27":"water_rescue_school","28":"water_rescue_heliport"},
-            mission_types_collection: ["firehouse_missions","ambulance_station_missions","police_station_missions","technical_aid_organization_missions","riot_police_missions","rapid_deployment_group_missions","water_watch_missions","factory_fire_brigade_missions","mountain_missions","coastal_rescue_missions"],
-            mission_types_with_filter_ids: {"0":"firehouse_missions","1":"firehouse_missions","2":"firehouse_missions","3":"firehouse_missions","4":"firehouse_missions","5":"firehouse_missions","6":"firehouse_missions","7":"firehouse_missions","8":"firehouse_missions","9":"firehouse_missions","10":"firehouse_missions","11":"firehouse_missions","12":"firehouse_missions","13":"firehouse_missions","14":"firehouse_missions","15":"firehouse_missions","16":"firehouse_missions","17":"firehouse_missions","18":"firehouse_missions","19":"firehouse_missions","20":"firehouse_missions","21":"firehouse_missions","22":"firehouse_missions","23":"firehouse_missions","24":"firehouse_missions","25":"firehouse_missions","26":"firehouse_missions","27":"firehouse_missions","28":"firehouse_missions","29":"firehouse_missions","30":"firehouse_missions","31":"firehouse_missions","32":"firehouse_missions","33":"firehouse_missions","34":"firehouse_missions","35":"firehouse_missions","36":"firehouse_missions","37":"firehouse_missions","38":"firehouse_missions","39":"firehouse_missions","40":"firehouse_missions","41":"firehouse_missions","42":"firehouse_missions","43":"firehouse_missions","44":"ambulance_station_missions","45":"ambulance_station_missions","46":"ambulance_station_missions","47":"ambulance_station_missions","48":"ambulance_station_missions","49":"ambulance_station_missions","50":"ambulance_station_missions","51":"firehouse_missions","52":"firehouse_missions","53":"firehouse_missions","54":"ambulance_station_missions","55":"firehouse_missions","56":"ambulance_station_missions","57":"ambulance_station_missions","58":"ambulance_station_missions","59":"firehouse_missions","60":"police_station_missions","61":"police_station_missions","62":"police_station_missions","63":"police_station_missions","64":"police_station_missions","65":"police_station_missions","66":"police_station_missions","67":"police_station_missions","68":"police_station_missions","69":"police_station_missions","70":"police_station_missions","71":"police_station_missions","72":"firehouse_missions","73":"police_station_missions","74":"police_station_missions","75":"police_station_missions","76":"firehouse_missions","77":"firehouse_missions","78":"firehouse_missions","79":"firehouse_missions","80":"firehouse_missions","81":"police_station_missions","82":"police_station_missions","83":"firehouse_missions","84":"firehouse_missions","85":"police_station_missions","86":"firehouse_missions","87":"firehouse_missions","88":"firehouse_missions","89":"firehouse_missions","90":"police_station_missions","91":"firehouse_missions","92":"ambulance_station_missions","93":"firehouse_missions","94":"firehouse_missions","95":"firehouse_missions","96":"firehouse_missions","97":"firehouse_missions","98":"police_station_missions","99":"firehouse_missions","100":"firehouse_missions","101":"firehouse_missions","102":"firehouse_missions","103":"firehouse_missions","104":"firehouse_missions","105":"firehouse_missions","106":"police_station_missions","107":"police_station_missions","108":"ambulance_station_missions","109":"ambulance_station_missions","110":"ambulance_station_missions","111":"firehouse_missions","112":"firehouse_missions","113":"firehouse_missions","114":"firehouse_missions","115":"ambulance_station_missions","116":"police_station_missions","117":"police_station_missions","118":"police_station_missions","119":"police_station_missions","120":"firehouse_missions","121":"firehouse_missions","122":"police_station_missions","123":"firehouse_missions","124":"firehouse_missions","125":"firehouse_missions","126":"firehouse_missions","127":"firehouse_missions","128":"police_station_missions","129":"firehouse_missions","130":"police_station_missions","131":"firehouse_missions","132":"firehouse_missions","133":"firehouse_missions","134":"firehouse_missions","135":"firehouse_missions","136":"firehouse_missions","137":"firehouse_missions","138":"firehouse_missions","139":"firehouse_missions","140":"firehouse_missions","141":"firehouse_missions","142":"firehouse_missions","143":"firehouse_missions","144":"firehouse_missions","145":"police_station_missions","146":"firehouse_missions","147":"ambulance_station_missions","148":"police_station_missions","149":"police_station_missions","150":"police_station_missions","151":"police_station_missions","152":"police_station_missions","153":"police_station_missions","154":"ambulance_station_missions","155":"ambulance_station_missions","156":"ambulance_station_missions","157":"ambulance_station_missions","158":"firehouse_missions","159":"firehouse_missions","160":"firehouse_missions","161":"firehouse_missions","162":"firehouse_missions","163":"firehouse_missions","164":"ambulance_station_missions","165":"ambulance_station_missions","166":"firehouse_missions","167":"firehouse_missions","168":"firehouse_missions","169":"firehouse_missions","170":"firehouse_missions","171":"firehouse_missions","172":"firehouse_missions","173":"firehouse_missions","174":"technical_aid_organization_missions","175":"technical_aid_organization_missions","176":"technical_aid_organization_missions","177":"technical_aid_organization_missions","178":"technical_aid_organization_missions","179":"ambulance_station_missions","180":"ambulance_station_missions","181":"ambulance_station_missions","182":"ambulance_station_missions","183":"ambulance_station_missions","184":"ambulance_station_missions","185":"ambulance_station_missions","186":"firehouse_missions","187":"firehouse_missions","188":"police_station_missions","189":"police_station_missions","190":"police_station_missions","191":"firehouse_missions","192":"firehouse_missions","193":"firehouse_missions","194":"firehouse_missions","195":"riot_police_missions","196":"riot_police_missions","197":"riot_police_missions","198":"riot_police_missions","199":"riot_police_missions","200":"riot_police_missions","201":"riot_police_missions","202":"police_station_missions","203":"firehouse_missions","204":"firehouse_missions","205":"firehouse_missions","206":"technical_aid_organization_missions","207":"firehouse_missions","208":"firehouse_missions","209":"police_station_missions","210":"ambulance_station_missions","211":"ambulance_station_missions","212":"ambulance_station_missions","213":"technical_aid_organization_missions","214":"firehouse_missions","215":"firehouse_missions","216":"firehouse_missions","217":"firehouse_missions","218":"firehouse_missions","219":"firehouse_missions","220":"firehouse_missions","221":"firehouse_missions","222":"firehouse_missions","223":"firehouse_missions","224":"firehouse_missions","225":"rapid_deployment_group_missions","226":"rapid_deployment_group_missions","227":"riot_police_missions","228":"police_station_missions","229":"rapid_deployment_group_missions","230":"firehouse_missions","231":"police_station_missions","232":"police_station_missions","233":"police_station_missions","234":"firehouse_missions","235":"firehouse_missions","236":"firehouse_missions","237":"firehouse_missions","238":"firehouse_missions","239":"firehouse_missions","240":"firehouse_missions","241":"police_station_missions","242":"firehouse_missions","243":"police_station_missions","244":"water_watch_missions","245":"water_watch_missions","246":"water_watch_missions","247":"water_watch_missions","248":"water_watch_missions","249":"water_watch_missions","250":"water_watch_missions","251":"water_watch_missions","252":"water_watch_missions","253":"water_watch_missions","254":"water_watch_missions","255":"water_watch_missions","256":"firehouse_missions","257":"police_station_missions","258":"firehouse_missions","259":"firehouse_missions","260":"firehouse_missions","261":"firehouse_missions","262":"firehouse_missions","263":"firehouse_missions","264":"firehouse_missions","265":"firehouse_missions","266":"firehouse_missions","267":"police_station_missions","268":"firehouse_missions","269":"police_station_missions","270":"police_station_missions","271":"firehouse_missions","272":"water_watch_missions","273":"water_watch_missions","274":"ambulance_station_missions","275":"riot_police_missions","276":"police_station_missions","277":"firehouse_missions","278":"technical_aid_organization_missions","279":"technical_aid_organization_missions","280":"firehouse_missions","281":"ambulance_station_missions","282":"firehouse_missions","283":"firehouse_missions","284":"police_station_missions","285":"police_station_missions","286":"technical_aid_organization_missions","287":"police_station_missions","288":"firehouse_missions","289":"firehouse_missions","290":"firehouse_missions","291":"riot_police_missions","292":"police_station_missions","293":"ambulance_station_missions","294":"riot_police_missions","295":"police_station_missions","296":"firehouse_missions","297":"ambulance_station_missions","298":"water_watch_missions","299":"firehouse_missions","300":"firehouse_missions","301":"police_station_missions","302":"firehouse_missions","303":"firehouse_missions","304":"riot_police_missions","305":"riot_police_missions","306":"riot_police_missions","307":"riot_police_missions","308":"firehouse_missions","309":"water_watch_missions","310":"water_watch_missions","311":"firehouse_missions","312":"ambulance_station_missions","313":"firehouse_missions","314":"firehouse_missions","315":"firehouse_missions","316":"firehouse_missions","317":"firehouse_missions","318":"firehouse_missions","319":"firehouse_missions","320":"firehouse_missions","321":"firehouse_missions","322":"police_station_missions","323":"firehouse_missions","324":"firehouse_missions","325":"riot_police_missions","326":"ambulance_station_missions","327":"firehouse_missions","328":"firehouse_missions","329":"firehouse_missions","330":"firehouse_missions","331":"firehouse_missions","332":"firehouse_missions","333":"firehouse_missions","334":"firehouse_missions","335":"firehouse_missions","336":"firehouse_missions","337":"firehouse_missions","338":"firehouse_missions","339":"ambulance_station_missions","340":"ambulance_station_missions","341":"ambulance_station_missions","342":"firehouse_missions","343":"firehouse_missions","344":"firehouse_missions","345":"firehouse_missions","346":"technical_aid_organization_missions","347":"firehouse_missions","348":"firehouse_missions","349":"firehouse_missions","350":"firehouse_missions","351":"firehouse_missions","352":"firehouse_missions","353":"riot_police_missions","354":"ambulance_station_missions","355":"police_station_missions","356":"police_station_missions","357":"police_station_missions","358":"police_station_missions","359":"riot_police_missions","360":"firehouse_missions","361":"firehouse_missions","362":"firehouse_missions","363":"firehouse_missions","364":"firehouse_missions","365":"firehouse_missions","366":"police_station_missions","367":"police_station_missions","368":"firehouse_missions","369":"firehouse_missions","370":"police_station_missions","371":"firehouse_missions","372":"police_station_missions","373":"ambulance_station_missions","374":"ambulance_station_missions","375":"firehouse_missions","376":"police_station_missions","377":"ambulance_station_missions","378":"police_station_missions","379":"firehouse_missions","380":"firehouse_missions","381":"firehouse_missions","382":"firehouse_missions","383":"police_station_missions","384":"firehouse_missions","385":"factory_fire_brigade_missions","386":"factory_fire_brigade_missions","387":"factory_fire_brigade_missions","388":"factory_fire_brigade_missions","389":"factory_fire_brigade_missions","390":"firehouse_missions","391":"ambulance_station_missions","392":"firehouse_missions","393":"firehouse_missions","394":"firehouse_missions","395":"factory_fire_brigade_missions","396":"factory_fire_brigade_missions","397":"ambulance_station_missions","398":"factory_fire_brigade_missions","399":"factory_fire_brigade_missions","400":"factory_fire_brigade_missions","401":"factory_fire_brigade_missions","402":"factory_fire_brigade_missions","403":"factory_fire_brigade_missions","404":"factory_fire_brigade_missions","405":"factory_fire_brigade_missions","406":"factory_fire_brigade_missions","407":"factory_fire_brigade_missions","408":"factory_fire_brigade_missions","409":"factory_fire_brigade_missions","410":"factory_fire_brigade_missions","411":"firehouse_missions","412":"factory_fire_brigade_missions","413":"factory_fire_brigade_missions","414":"factory_fire_brigade_missions","415":"police_station_missions","416":"ambulance_station_missions","417":"ambulance_station_missions","418":"police_station_missions","419":"factory_fire_brigade_missions","420":"ambulance_station_missions","421":"firehouse_missions","422":"police_station_missions","423":"firehouse_missions","424":"firehouse_missions","425":"ambulance_station_missions","426":"ambulance_station_missions","427":"ambulance_station_missions","428":"firehouse_missions","429":"technical_aid_organization_missions","430":"firehouse_missions","431":"ambulance_station_missions","432":"firehouse_missions","433":"firehouse_missions","434":"factory_fire_brigade_missions","435":"factory_fire_brigade_missions","436":"firehouse_missions","437":"police_station_missions","438":"firehouse_missions","439":"firehouse_missions","440":"ambulance_station_missions","441":"firehouse_missions","442":"water_watch_missions","443":"firehouse_missions","444":"riot_police_missions","445":"police_station_missions","446":"firehouse_missions","447":"firehouse_missions","448":"police_station_missions","449":"firehouse_missions","450":"firehouse_missions","451":"firehouse_missions","452":"firehouse_missions","453":"firehouse_missions","454":"firehouse_missions","455":"firehouse_missions","456":"firehouse_missions","457":"firehouse_missions","458":"riot_police_missions","459":"firehouse_missions","460":"firehouse_missions","461":"ambulance_station_missions","462":"firehouse_missions","463":"police_station_missions","464":"technical_aid_organization_missions","465":"factory_fire_brigade_missions","466":"ambulance_station_missions","467":"ambulance_station_missions","468":"ambulance_station_missions","469":"firehouse_missions","470":"firehouse_missions","471":"water_watch_missions","472":"water_watch_missions","473":"firehouse_missions","474":"firehouse_missions","475":"firehouse_missions","476":"police_station_missions","477":"firehouse_missions","478":"firehouse_missions","479":"firehouse_missions","480":"firehouse_missions","481":"firehouse_missions","482":"firehouse_missions","483":"firehouse_missions","484":"firehouse_missions","485":"factory_fire_brigade_missions","486":"riot_police_missions","487":"firehouse_missions","488":"ambulance_station_missions","489":"ambulance_station_missions","490":"ambulance_station_missions","491":"ambulance_station_missions","492":"ambulance_station_missions","493":"ambulance_station_missions","494":"police_station_missions","495":"police_station_missions","496":"firehouse_missions","497":"water_watch_missions","498":"water_watch_missions","499":"firehouse_missions","500":"ambulance_station_missions","501":"technical_aid_organization_missions","502":"firehouse_missions","503":"technical_aid_organization_missions","504":"technical_aid_organization_missions","505":"water_watch_missions","506":"police_station_missions","507":"water_watch_missions","508":"ambulance_station_missions","509":"firehouse_missions","510":"police_station_missions","511":"police_station_missions","512":"police_station_missions","513":"technical_aid_organization_missions","514":"riot_police_missions","515":"factory_fire_brigade_missions","516":"firehouse_missions","517":"firehouse_missions","518":"firehouse_missions","519":"ambulance_station_missions","520":"firehouse_missions","521":"factory_fire_brigade_missions","522":"ambulance_station_missions","523":"firehouse_missions","524":"firehouse_missions","525":"technical_aid_organization_missions","526":"technical_aid_organization_missions","527":"firehouse_missions","528":"water_watch_missions","529":"water_watch_missions","530":"technical_aid_organization_missions","531":"technical_aid_organization_missions","532":"police_station_missions","533":"water_watch_missions","534":"firehouse_missions","535":"technical_aid_organization_missions","536":"police_station_missions","537":"police_station_missions","538":"ambulance_station_missions","539":"technical_aid_organization_missions","540":"firehouse_missions","541":"technical_aid_organization_missions","542":"technical_aid_organization_missions","543":"technical_aid_organization_missions","544":"firehouse_missions","545":"technical_aid_organization_missions","546":"rapid_deployment_group_missions","547":"water_watch_missions","548":"firehouse_missions","549":"police_station_missions","550":"firehouse_missions","551":"police_station_missions","552":"firehouse_missions","553":"ambulance_station_missions","554":"police_station_missions","555":"factory_fire_brigade_missions","556":"factory_fire_brigade_missions","557":"firehouse_missions","558":"firehouse_missions","559":"factory_fire_brigade_missions","560":"rapid_deployment_group_missions","561":"ambulance_station_missions","562":"firehouse_missions","563":"police_station_missions","564":"police_station_missions","565":"police_station_missions","566":"police_station_missions","567":"police_station_missions","568":"riot_police_missions","569":"police_station_missions","570":"firehouse_missions","571":"firehouse_missions","572":"police_station_missions","573":"firehouse_missions","574":"firehouse_missions","575":"firehouse_missions","576":"firehouse_missions","577":"firehouse_missions","578":"firehouse_missions","579":"factory_fire_brigade_missions","580":"riot_police_missions","581":"ambulance_station_missions","582":"ambulance_station_missions","583":"ambulance_station_missions","584":"ambulance_station_missions","585":"ambulance_station_missions","586":"firehouse_missions","587":"firehouse_missions","588":"ambulance_station_missions","589":"police_station_missions","590":"police_station_missions","591":"firehouse_missions","592":"riot_police_missions","593":"technical_aid_organization_missions","594":"firehouse_missions","595":"ambulance_station_missions","596":"firehouse_missions","597":"ambulance_station_missions","598":"ambulance_station_missions","599":"ambulance_station_missions","600":"ambulance_station_missions","601":"firehouse_missions","602":"firehouse_missions","603":"police_station_missions","604":"police_station_missions","605":"police_station_missions","606":"firehouse_missions","607":"police_station_missions","608":"police_station_missions","609":"firehouse_missions","610":"firehouse_missions","611":"riot_police_missions","612":"riot_police_missions","613":"ambulance_station_missions","614":"police_station_missions","615":"police_station_missions","616":"police_station_missions","617":"technical_aid_organization_missions","618":"ambulance_station_missions","619":"technical_aid_organization_missions","620":"factory_fire_brigade_missions","621":"factory_fire_brigade_missions","622":"ambulance_station_missions","623":"technical_aid_organization_missions","624":"technical_aid_organization_missions","625":"firehouse_missions","626":"ambulance_station_missions","627":"firehouse_missions","628":"firehouse_missions","629":"police_station_missions","630":"police_station_missions","631":"police_station_missions","632":"police_station_missions","633":"police_station_missions","634":"police_station_missions","635":"police_station_missions","636":"police_station_missions","637":"factory_fire_brigade_missions","638":"firehouse_missions","639":"firehouse_missions","640":"ambulance_station_missions","641":"police_station_missions","642":"technical_aid_organization_missions","643":"firehouse_missions","644":"firehouse_missions","645":"firehouse_missions","646":"water_watch_missions","647":"firehouse_missions","648":"ambulance_station_missions","649":"ambulance_station_missions","650":"technical_aid_organization_missions","651":"technical_aid_organization_missions","652":"police_station_missions","653":"firehouse_missions","654":"firehouse_missions","655":"technical_aid_organization_missions","656":"technical_aid_organization_missions","657":"technical_aid_organization_missions","658":"technical_aid_organization_missions","659":"firehouse_missions","660":"technical_aid_organization_missions","661":"technical_aid_organization_missions","662":"technical_aid_organization_missions","663":"technical_aid_organization_missions","664":"water_watch_missions","665":"ambulance_station_missions","666":"firehouse_missions","667":"firehouse_missions","668":"police_station_missions","669":"firehouse_missions","670":"technical_aid_organization_missions","671":"water_watch_missions","672":"ambulance_station_missions","673":"firehouse_missions","674":"ambulance_station_missions","675":"police_station_missions","676":"firehouse_missions","677":"ambulance_station_missions","678":"firehouse_missions","679":"firehouse_missions","680":"firehouse_missions","681":"ambulance_station_missions","682":"technical_aid_organization_missions","683":"police_station_missions","684":"firehouse_missions","685":"technical_aid_organization_missions","686":"firehouse_missions","687":"firehouse_missions","688":"police_station_missions","689":"riot_police_missions","690":"firehouse_missions","691":"ambulance_station_missions","692":"firehouse_missions","693":"police_station_missions","694":"firehouse_missions","695":"ambulance_station_missions","696":"firehouse_missions","697":"technical_aid_organization_missions","698":"firehouse_missions","699":"firehouse_missions","700":"ambulance_station_missions","701":"firehouse_missions","702":"firehouse_missions","703":"ambulance_station_missions","704":"firehouse_missions","705":"police_station_missions","706":"firehouse_missions","707":"firehouse_missions","708":"firehouse_missions","709":"firehouse_missions","710":"firehouse_missions","711":"police_station_missions","712":"police_station_missions","713":"police_station_missions","714":"firehouse_missions","715":"ambulance_station_missions","716":"firehouse_missions","717":"police_station_missions","718":"firehouse_missions","719":"police_station_missions","720":"firehouse_missions","721":"police_station_missions","722":"ambulance_station_missions","723":"ambulance_station_missions","724":"ambulance_station_missions","725":"police_station_missions","726":"ambulance_station_missions","727":"firehouse_missions","728":"police_station_missions","729":"police_station_missions","730":"ambulance_station_missions","731":"firehouse_missions","732":"firehouse_missions","733":"firehouse_missions","734":"firehouse_missions","735":"firehouse_missions","736":"firehouse_missions","737":"water_watch_missions","738":"ambulance_station_missions","739":"firehouse_missions","740":"firehouse_missions","741":"firehouse_missions","742":"ambulance_station_missions","743":"firehouse_missions","744":"firehouse_missions","745":"firehouse_missions","746":"police_station_missions","747":"police_station_missions","748":"police_station_missions","749":"firehouse_missions","750":"firehouse_missions","751":"ambulance_station_missions","752":"firehouse_missions","753":"firehouse_missions","754":"ambulance_station_missions","755":"firehouse_missions","756":"firehouse_missions","757":"firehouse_missions","758":"firehouse_missions","759":"firehouse_missions","760":"police_station_missions","761":"police_station_missions","762":"police_station_missions","763":"police_station_missions","764":"police_station_missions","765":"ambulance_station_missions","766":"ambulance_station_missions","767":"ambulance_station_missions","768":"ambulance_station_missions","769":"ambulance_station_missions","770":"police_station_missions","771":"police_station_missions","772":"police_station_missions","773":"firehouse_missions","774":"water_watch_missions","775":"riot_police_missions","776":"firehouse_missions","777":"firehouse_missions","778":"firehouse_missions","779":"firehouse_missions","780":"ambulance_station_missions","781":"firehouse_missions","782":"firehouse_missions","783":"firehouse_missions","784":"police_station_missions","785":"police_station_missions","786":"police_station_missions","787":"firehouse_missions","788":"police_station_missions","789":"police_station_missions","790":"firehouse_missions","791":"firehouse_missions","792":"firehouse_missions","793":"water_watch_missions","794":"police_station_missions","795":"water_watch_missions","796":"firehouse_missions","797":"firehouse_missions","798":"firehouse_missions","799":"ambulance_station_missions","800":"technical_aid_organization_missions","801":"technical_aid_organization_missions","802":"technical_aid_organization_missions","803":"technical_aid_organization_missions","804":"technical_aid_organization_missions","805":"technical_aid_organization_missions","806":"technical_aid_organization_missions","807":"technical_aid_organization_missions","808":"technical_aid_organization_missions","809":"technical_aid_organization_missions","810":"technical_aid_organization_missions","811":"firehouse_missions","812":"firehouse_missions","813":"firehouse_missions","814":"technical_aid_organization_missions","815":"technical_aid_organization_missions","816":"technical_aid_organization_missions","817":"technical_aid_organization_missions","818":"technical_aid_organization_missions","819":"technical_aid_organization_missions","820":"technical_aid_organization_missions","821":"firehouse_missions","822":"firehouse_missions","823":"firehouse_missions","824":"firehouse_missions","825":"firehouse_missions","826":"firehouse_missions","827":"police_station_missions","828":"firehouse_missions","829":"firehouse_missions","830":"firehouse_missions","831":"water_watch_missions","832":"police_station_missions","833":"firehouse_missions","834":"police_station_missions","835":"police_station_missions","836":"police_station_missions","837":"police_station_missions","838":"technical_aid_organization_missions","839":"technical_aid_organization_missions","840":"police_station_missions","841":"ambulance_station_missions","842":"ambulance_station_missions","843":"police_station_missions","844":"firehouse_missions","845":"police_station_missions","846":"police_station_missions","847":"firehouse_missions","848":"technical_aid_organization_missions","849":"police_station_missions","850":"firehouse_missions","851":"police_station_missions","852":"ambulance_station_missions","853":"mountain_missions","854":"mountain_missions","855":"mountain_missions","856":"mountain_missions","857":"mountain_missions","858":"mountain_missions","859":"mountain_missions","860":"mountain_missions","861":"mountain_missions","862":"mountain_missions","863":"mountain_missions","864":"mountain_missions","865":"police_station_missions","866":"mountain_missions","867":"mountain_missions","868":"ambulance_station_missions","869":"ambulance_station_missions","870":"ambulance_station_missions","871":"riot_police_missions","872":"police_station_missions","873":"firehouse_missions","874":"ambulance_station_missions","875":"ambulance_station_missions","876":"firehouse_missions","877":"firehouse_missions","878":"police_station_missions","879":"firehouse_missions","880":"ambulance_station_missions","881":"mountain_missions","882":"police_station_missions","883":"police_station_missions","884":"firehouse_missions","885":"coastal_rescue_missions","886":"coastal_rescue_missions","887":"coastal_rescue_missions","888":"coastal_rescue_missions","889":"coastal_rescue_missions","890":"coastal_rescue_missions","891":"coastal_rescue_missions","892":"coastal_rescue_missions","893":"coastal_rescue_missions","894":"coastal_rescue_missions","895":"coastal_rescue_missions","896":"coastal_rescue_missions","897":"ambulance_station_missions","898":"firehouse_missions","899":"firehouse_missions","900":"police_station_missions","901":"firehouse_missions","902":"firehouse_missions","903":"firehouse_missions","904":"firehouse_missions","905":"firehouse_missions","906":"firehouse_missions","907":"firehouse_missions","908":"firehouse_missions","909":"firehouse_missions","910":"firehouse_missions","911":"firehouse_missions","912":"ambulance_station_missions","913":"firehouse_missions","914":"firehouse_missions","915":"firehouse_missions","916":"firehouse_missions"}
-          }
-        );
-
-            map.addLayer(map_filters_service.getMapFiltersLayers()['all_buildings']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['user_buildings']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['firehouse']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['fire_school']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['ambulance_station']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['hospital']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['police_station']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['police_copter_station']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['police_school']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['staging_area']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['rescue_copter_station']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['dispatch_center']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['rapid_deployment_group']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['riot_police']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['police_special_forces']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['technical_aid_organization']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['technical_aid_organization_school']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['water_watch']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['rescue_school']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['rescue_dog_unit']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['complex']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['coastal_rescue']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['water_rescue_school']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['water_rescue_heliport']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['horse_stable']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['mountain_rescue']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['alliance_buildings']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['alliance_members']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['all_missions']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['user_missions']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['firehouse_missions']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['police_station_missions']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['rapid_deployment_group_missions']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['riot_police_missions']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['ambulance_station_missions']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['technical_aid_organization_missions']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['water_watch_missions']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['factory_fire_brigade_missions']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['coastal_rescue_missions']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['mountain_missions']);
-            map.addLayer(map_filters_service.getMapFiltersLayers()['alliance_missions']);
-
-
-			L.control.layers(null, map_filters_service.getMapFiltersLayersForMap()).addTo(map);
-
-			map.on("moveend", map_moved);
-			map.on("zoomend", zoom_change);
-      map.on('overlayadd overlayremove', map_filters_service.onOverlayChanged);
-
-				var mapExpandControl = L.Control.extend({
-
-				  options: {
-				    position: 'topleft'
-				  },
-
-					onAdd: function (map) {
-				    var container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom map-expand-button hidden-xs');
-
-				    container.style.backgroundColor = 'white';
-				    container.style.width = '26px';
-				    container.style.height = '26px';
-
-				    container.onclick = function(){
-				      mapExpand(false);
-				    }
-				    return container;
-				  }
-
-				});
-
-				map.addControl(new mapExpandControl());
-
-		}
-
-
-    lastMissionTimeoutID = setTimeout("missionRequest()", 2000);
-	});
-
-</script>
-
-
-
-
-
-<div class="row" id="row-main-template">
-
-	<div class="col-sm-8 overview_outer" id="map_outer">
-
-
-		<div id="map"></div>
-
-
-	</div>
-
-	<div class="col-sm-4 overview_outer bigMapWindow" id="missions_outer">
-    <div id="missions">
-			<div id="missions-panel-head" class="missions-panel-head big_map_window_head">
-				<div id="missions-panel-main" class="missions-panel-main">
-					<div class="dropdown">
-						<a style="display:none;" id="mission_speed_pause" class="label-speedbutton label label-warning dropdown-toggle" type="button" id="mission-speed-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-label="Einsatz-Geschwindigkeit, Pause" role="button">
-							<span class="glyphicon glyphicon-pause"></span>
-							Pause
-						</a>
-						<a style="display:none;" id="mission_speed_play" class="label-speedbutton label label-success dropdown-toggle" type="button" id="mission-speed-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-label="Einsatz-Geschwindigkeit, 0x" role="button">
-							<span class="glyphicon glyphicon-play"></span>
-							<span id="mission_speed_value_label"></span>
-						</a>
-
-						<ul class="dropdown-menu mission-speed-dropdown-menu" aria-labelledby="mission-speed-dropdown">
-                <li class="mission-speed-btn" title="Einsätze werden alle 20 Sekunden generiert.">
-                <a href="/missionSpeed?speed=3" role="button">
-                  <span class="glyphicon glyphicon-play"></span> 3x
-                    <img alt="Premium_dark" class="premium-icon light-visible" src="/images/premium_dark.png" width="13" />
-                        <img alt="Premium_light" class="premium-icon dark-visible" src="/images/premium_light.png" width="13" />
-</a>                </li>
-                <li class="mission-speed-btn" title="Einsätze werden alle 30 Sekunden generiert.">
-                <a href="/missionSpeed?speed=2" role="button">
-                  <span class="glyphicon glyphicon-play"></span> 2x
-</a>                </li>
-                <li class="mission-speed-btn" title="Einsätze werden jede Minute generiert.">
-                <a href="/missionSpeed?speed=1" role="button">
-                  <span class="glyphicon glyphicon-play"></span> 1x
-</a>                </li>
-                <li class="mission-speed-btn" title="Einsätze werden alle 2 Minuten generiert.">
-                <a href="/missionSpeed?speed=7" role="button">
-                  <span class="glyphicon glyphicon-play"></span> 0.5x
-</a>                </li>
-                <li class="mission-speed-btn" title="Einsätze werden alle 3 Minuten generiert.">
-                <a href="/missionSpeed?speed=0" role="button">
-                  <span class="glyphicon glyphicon-play"></span> 0.33x
-</a>                </li>
-                <li class="mission-speed-btn" title="Einsätze werden alle 5 Minuten generiert.">
-                <a href="/missionSpeed?speed=4" role="button">
-                  <span class="glyphicon glyphicon-play"></span> 0.20x
-</a>                </li>
-                <li class="mission-speed-btn" title="Einsätze werden alle 7 Minuten generiert.">
-                <a href="/missionSpeed?speed=8" role="button">
-                  <span class="glyphicon glyphicon-play"></span> 0.15x
-</a>                </li>
-                <li class="mission-speed-btn" title="Einsätze werden alle 10 Minuten generiert.">
-                <a href="/missionSpeed?speed=5" role="button">
-                  <span class="glyphicon glyphicon-play"></span> 0.10x
-</a>                </li>
-							<li class="mission-speed-btn" title="Es werden keine Einsätze generiert. ">
-								<a href="/missionSpeed?speed=6" role="button">
-									<span class="glyphicon glyphicon-pause"></span> Pause
-</a>							</li>
-						</ul>
-					</div>
-
-					<a href="" aria-describedby="mission-filter-description" aria-label="Notfälle" class="btn btn-xs btn-success mission_selection" classShow="mission_list" data-type-filter="emergency" id="mission_select_emergency" role="button" title="Notfälle"></a>
-						<a href="" aria-describedby="mission-filter-description" aria-label="Krankentransporte" class="btn btn-xs btn-success mission_selection" classShow="mission_list_krankentransporte" data-type-filter="krankentransporte" id="mission_select_krankentransport" role="button" title="Krankentransporte"></a>
-					<a href="" aria-describedby="mission-filter-description" aria-label="Verbandseinsätze" class="btn btn-xs btn-success mission_selection" classShow="mission_list_alliance" data-type-filter="alliance" id="mission_select_alliance" role="button" title="Verbandseinsätze"></a>
-					<a href="" aria-describedby="mission-filter-description" aria-label="Event" class="btn btn-xs btn-success mission_selection" classShow="mission_list_alliance_event" data-type-filter="alliance_event" id="mission_select_alliance_event" role="button" title="Event"></a>
-					<a href="" aria-describedby="mission-filter-description" aria-label="Geplante Einsätze" class="btn btn-xs btn-success mission_selection" classShow="mission_list_sicherheitswache" data-type-filter="sicherheitswache" id="mission_select_sicherheitswache" role="button" title="Geplante Einsätze"></a>
-					<div class="filters-display-control btn btn-default btn-xs glyphicon" role="button"></div>
-				</div>
-
-				<div id="mission-filters-block" class="mission-filters-block">
-					<div class="mission-filters-top">
-						<div class="mission-filters hidden">
-							<div class="mission-filters-row">
-								<div class="mission-state-filters">
-									<a href="" aria-describedby="mission-filter-description" aria-label="Unbearbeite Einsätze" class="btn btn-xs btn-success mission_selection" data-state-filter="unattended" id="mission_select_unattended" role="button" title="Unbearbeitete Einsätze">
-										<div class="icon">
-											<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-												<path d="m2.095 19.882 9.248-16.5c.133-.237.384-.384.657-.384.272 0 .524.147.656.384l9.248 16.5c.064.115.096.241.096.367 0 .385-.309.749-.752.749h-18.496c-.44 0-.752-.36-.752-.749 0-.126.031-.252.095-.367z" fill-rule="nonzero"/>
-											</svg>
-										</div>
-										<span class="counter"></span>
-</a>									<a href="" aria-describedby="mission-filter-description" aria-label="Bearbeitete Einsätze, nicht alle Bedingungen erfüllt" class="btn btn-xs btn-success mission_selection" data-state-filter="attended" id="mission_select_attended" role="button" title="Bearbeitete Einsätze">
-										<div class="icon">
-											<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-												<circle cx="11.998" cy="11.998" fill-rule="nonzero" r="9.998"/>
-											</svg>
-										</div>
-										<span class="counter"></span>
-</a>									<a href="" aria-describedby="mission-filter-description" aria-label="Einsätze in Durchführung, alle Bedingungen erfüllt" class="btn btn-xs btn-success mission_selection" data-state-filter="finishing" id="mission_select_finishing" role="button" title="Einsätze in Durchführung">
-										<div class="icon">
-											<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-												<path d="m11.262 2.306c.196-.196.461-.306.738-.306s.542.11.738.306c1.917 1.917 7.039 7.039 8.956 8.956.196.196.306.461.306.738s-.11.542-.306.738c-1.917 1.917-7.039 7.039-8.956 8.956-.196.196-.461.306-.738.306s-.542-.11-.738-.306c-1.917-1.917-7.039-7.039-8.956-8.956-.196-.196-.306-.461-.306-.738s.11-.542.306-.738c1.917-1.917 7.039-7.039 8.956-8.956z" fill-rule="nonzero"/>
-											</svg>
-										</div>
-										<span class="counter"></span>
-</a>								</div>
-
-								<div class="mission-participation-filters">
-									<a href="" aria-describedby="mission-filter-description" aria-label="Neue Einsätze" class="btn btn-xs btn-success mission_selection" data-participation-filter="new" id="mission_select_new" role="button" title="Neue Einsätze">
-										<span class="glyphicon glyphicon-asterisk"></span> <span class="counter"></span>
-</a>									<a href="" aria-describedby="mission-filter-description" aria-label="Gestartete Einsätze" class="btn btn-xs btn-success mission_selection" data-participation-filter="started" id="mission_select_started" role="button" title="Gestartete Einsätze">
-										<span class="glyphicon glyphicon-user"></span> <span class="counter"></span>
-</a>								</div>
-							</div>
-
-							<div class="mission-sorting">
-								<select class="form-control input-sm missions-sortable-select" id="missions-sortable-select">
-									<option data-sort-key="age" data-sort-direction="asc">Älteste (Freigegeben)</option>
-									<option data-sort-key="age" data-sort-direction="desc">Neueste (Freigegeben)</option>
-									<option data-sort-key="created_at" data-sort-direction="asc">Älteste</option>
-                  <option data-sort-key="created_at" data-sort-direction="desc">Neueste</option>
-                  <option data-sort-key="caption" data-sort-direction="asc">A bis Z</option>
-									<option data-sort-key="caption" data-sort-direction="desc">Z bis A</option>
-									<option data-sort-key="average_credits" data-sort-direction="asc">Min. Credits</option>
-									<option data-sort-key="average_credits" data-sort-direction="desc">Max. Credits</option>
-									<option data-sort-key="prisoners_count" data-sort-direction="desc">Gefangene</option>
-									<option data-sort-key="patients_count" data-sort-direction="desc">Patienten</option>
-								</select>
-							</div>
-
-							<span id="mission-filter-description" class="sr-only">Grün = Die Einsätze werden in der Leiste angezeigt. Rot = Die Einsätze werden nicht angezeigt.</span>
-						</div>
-
-					</div>
-
-					<input type="text" search_class="missionSideBarEntrySearchable" id="search_input_field_missions">
-				</div>
-
-				<div class="alert alert-danger mission-speed-error hidden">
-						<button type="button" class="close" >&times;</button>
-						<div><b>Einsatz-Geschwindigkeit konnte nicht ausgewählt werden</b><div>Für diese Funktion brauchst du ein Premium Account.</div><a href="https://www.leitstellenspiel.de/premiumaccount" class="btn btn-success lightbox-open">Premium aktivieren</a></div>
-        </div>
-
-
-			</div>
-			<div id="missions_post_loading_panel">
-				<div id="missions_loading" class="alert alert-info" style="display: none">
-					Einsätze werden geladen...
-					<div class="progress">
-						<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
-					</div>
-				</div>
-				<div id="missions_loading_error" class="alert alert-danger" style="display: none">
-					Es ist ein Fehler aufgetreten! Bitte versuch es erneut und lade die Seite erneut.
-					<a href="#" class="btn btn-xs ajax btn-default" onclick="asyncFetchOwnMissions();">Neuladen</a>
-				</div>
-				<div id="alliance_missions_loading" class="alert alert-info" style="display: none">
-					Verbandseinsätze werden geladen...
-					<div class="progress">
-						<div class="progress-bar progress-bar-striped active" role="progressbar" style="width: 100%"></div>
-					</div>
-				</div>
-				<div id="alliance_missions_loading_error" class="alert alert-danger" style="display: none">
-					Es ist ein Fehler aufgetreten! Bitte versuch es erneut und lade die Seite erneut.
-					<a href="#" class="btn btn-xs ajax btn-default" onclick="asyncFetchAllianceMissions();">Neuladen</a>
-				</div>
-			</div>
-			<div class="" id="missions-panel-body">
-
-				<div id="eventInfo"></div>
-
-
-
-
-
-
-				<div id="mission_list">
-					<div id="emergency_no" class="alert alert-info">
-						Es liegen keine Notfalleinsätze vor. Notfalleinsätze können ab der ersten Wache auftreten.
-					</div>
-				</div>
-
-				<div id="mission_list_krankentransporte">
-				</div>
-
-				<div id="mission_list_krankentransporte_alliance">
-				</div>
-
-				<div id="mission_list_sicherheitswache">
-				</div>
-
-				<div id="mission_list_sicherheitswache_alliance">
-				</div>
-
-				<div id="mission_list_alliance">
-					<div id="alliance_no_mission" class="alert alert-info info-bubble-with-button">
-              <span class="alliance_true">
-                Es liegen keine Verbandseinsätze vor. 
-              </span>
-					</div>
-				</div>
-
-				<div id="mission_list_alliance_event">
-				</div>
-
-					<div id="ktw_no_transports" class="alert alert-info">
-						Es liegen keine Krankentransporte vor. Krankentransporte können auftreten, sobald Du einen KTW und ein Krankenhaus besitzt.
-					</div>
-
-				<div class="btn-group hidden">
-					<a href="/buildings/new" class="btn btn-default btn-xs building_ajax" id="build_new_building">Neues Gebäude bauen</a>
-					<a href="/mission_positions/new" class="btn btn-xs btn-default" data-remote="true" id="build_new_poi">Neuen POI festlegen</a>
-				</div>
-
-				<div class="
-					">
-						<div class="alliance_true btn-group alliance_events_buttons">
-							<a href="/missionAllianceNew" class="btn btn-default btn-xs building_ajax" id="btn-alliance-new-mission">Verbands-Großeinsatz erstellen</a>
-							<a href="/missionAllianceEventNew" class="btn btn-default btn-xs building_ajax" id="btn-alliance-new-event">Verbands-Event starten</a>
-						</div>
-					<div class="btn-group hidden">
-						<a href="/buildings/new" class="btn btn-default btn-xs building_ajax" id="build_new_building">Neues Gebäude bauen</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-	<div class="col-sm-4 overview_outer bigMapWindow" id="buildings_outer">
-    <div id="buildings" class="sidebar-nav">
-    	<style>
-  #building-list-header-title.header-is-wrapped { order: 1; }
-  #building-list-header-buttons.header-is-wrapped { order: 3; }
-  #building-list-header-search.header-is-wrapped { order: 2; }
-</style>
-<div class="panel panel-default">
-	<div class="panel-heading big_map_window_head" id="building_panel_heading" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-content: center; gap: 5px;">
-		<div id="building-list-header-title" class="building-list-header-block">Wachen</div>
-		<div id="building-list-header-buttons" class="building-list-header-block btn-group ">
-			<a href="/buildings/new" class="btn btn-xs ajax btn-default " data-tutorial="build_new_building_step" id="build_new_building">Neues Gebäude bauen</a>
-			<div class="arrow_box_down" id="arrow_build_feuerwache">Baue eine Feuerwache</div>
-			<a href="/mission_positions/new" class="btn btn-xs btn-default" data-remote="true" id="build_new_poi">Neuen POI festlegen</a>
-		</div>
-    <div id="building-list-header-search" class="building-list-header-block flex-row justify-end align-items-center" style="flex-grow: 1; text-align: right;">
-      <input type="text" search_class="buildings_searchable" class="search-station-input pull-right" placeholder="Wachen suchen">
-    </div>
-	</div>
-  <div id="buildings_postloading">
-    <div id="buildings_loading" class="alert alert-info" style="display: none">
-      Gebäude werden geladen...
-      <div class="progress">
-        <div class="progress-bar progress-bar-striped active" role="progressbar" style="width: 100%"></div>
-      </div>
-    </div>
-    <div id="buildings_loading_error" class="alert alert-danger" style="display: none">
-      Es ist ein Fehler aufgetreten! Bitte versuche es erneut und lade die Seite erneut.
-      <button class="btn btn-xs ajax btn-default" name="button" onclick="asyncFetchBuildings();" type="submit">Neuladen</button>
-    </div>
-  </div>
-  <div class="panel-body" id="building_panel_body">
-
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karnevalsverein Homepage</title>
     <style>
-      #btn-group-building-select > * {
-          margin-bottom: 7px;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4b0082;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img {
+            height: 60px;
+        }
+        nav {
+            flex-grow: 1;
+            text-align: right;
+        }
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+        }
+        .nav-links li {
+            display: inline;
+            margin: 0 15px;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .search-bar {
+            padding: 5px;
+        }
+        .banner {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+        .image-slider {
+            width: 100%;
+            height: 100%;
+            background: url('event1.jpg') no-repeat center center/cover;
+            animation: slide 10s infinite;
+        }
+        @keyframes slide {
+            0% { background-image: url('event1.jpg'); }
+            50% { background-image: url('event2.jpg'); }
+            100% { background-image: url('event1.jpg'); }
+        }
+        .caption {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #000;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .quick-links {
+            margin: 20px 0;
+        }
+        .quick-links a {
+            color: #ffcc00;
+            margin-right: 15px;
+        }
+        section {
+            padding: 20px;
+            border-bottom: 1px solid #444;
+        }
+        footer {
+            background-color: #4b0082;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer-links a {
+            color: #fff;
+            margin: 0 10px;
+        }
+        @media (max-width: 600px) {
+            .nav-links li {
+                display: block;
+                margin: 10px 0;
+            }
+            .cta-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
-    <div class="btn-group" id="btn-group-building-select" style="display: flex; flex-wrap: wrap">
-        <a href="" building_type_ids="[0]" class="btn btn-xs btn-success building_selection" id="building_selection_feuerwehr">Feuerwehr</a>
-        <a href="" building_type_ids="[2,4,5,12,21]" class="btn btn-xs btn-success building_selection" id="building_selection_rettung">Rettung</a>
-        <a href="" building_type_ids="[6,11,17,13,24]" class="btn btn-xs btn-success building_selection" id="building_selection_polizei">Polizei</a>
-        <a href="" building_type_ids="[9]" class="btn btn-xs btn-success building_selection" id="building_selection_thw">THW</a>
-        <a href="" building_type_ids="[15]" class="btn btn-xs btn-success building_selection" id="building_selection_wasserrettung">Wasserrettung</a>
-        <a href="" building_type_ids="[25]" class="btn btn-xs btn-success building_selection" id="building_selection_mountain_rescue">Bergrettung</a>
-        <a href="" building_type_ids="[26,28]" class="btn btn-xs btn-success building_selection" id="building_selection_coastal_rescue">Seenotrettung</a>
-        <a href="" building_type_ids="[1,8,3,10,27]" class="btn btn-xs btn-success building_selection" id="building_selection_schule">Schulen</a>
-        <a href="" building_type_ids="[7]" class="btn btn-xs btn-success building_selection" id="building_selection_leitstelle">Leitstelle</a>
-        <a href="" building_type_ids="[22,23]" class="btn btn-xs btn-success building_selection" id="building_selection_building_complex">Gebäudekomplexe</a>
-        <a href="/leitstellenansicht" class="lightbox-open btn btn-xs btn-default" style="margin-left: auto">Alle anzeigen</a>
-    </div>
-
-		<ul id="building_list" >
-		</ul>
-		<div class="alert alert-success" id="building_no">
-			Du hast bisher kein Gebäude gebaut, klicke auf
-				<a href="/buildings/new" class="btn btn-default btn-xs ajax">Neues Gebäude bauen</a>
-			und baue eine Wache!
-		</div>
-	</div>
-</div>
-
-    <script type="text/javascript">
-    function domreadyjs() {
-        buildingResetContentPossible = true;
-        dom_ready_executed = true;
-        buildingMarkerReset();
-
-        buildingMarkerAddSingle({"id":22950425,"user_id":3095453,"name":"BFW Freiburg","longitude":7.8302916905015305,"latitude":47.991056157343486,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":3,"personal_count":25,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/22950425\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22950425\">Details</a>"});
-        buildingMarkerAddSingle({"id":22866589,"user_id":3095453,"name":"FFW Freiburg-Herdern","longitude":7.861232851663172,"latitude":48.007065602036704,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":3,"personal_count":29,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/22866589\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22866589\">Details</a>"});
-        buildingMarkerAddSingle({"id":22866038,"user_id":3095453,"name":"FFW Freiburg-Hochdorf","longitude":7.813983066849991,"latitude":48.03749138219285,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":2,"personal_count":30,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/22866038\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22866038\">Details</a>"});
-        buildingMarkerAddSingle({"id":22866627,"user_id":3095453,"name":"FFW Freiburg-Lehen","longitude":7.799391137608596,"latitude":48.017013363421256,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":2,"personal_count":23,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/22866627\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22866627\">Details</a>"});
-        buildingMarkerAddSingle({"id":22865022,"user_id":3095453,"name":"FFW Freiburg-Zähringen","longitude":7.858013762145464,"latitude":48.02243860626266,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":3,"personal_count":28,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/22865022\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22865022\">Details</a>"});
-        buildingMarkerAddSingle({"id":22979563,"user_id":3095453,"name":"FFW FR-LIttenweiler","longitude":7.899748314190043,"latitude":47.97861848822466,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":3,"personal_count":23,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/22979563\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22979563\">Details</a>"});
-        buildingMarkerAddSingle({"id":23056993,"user_id":3095453,"name":"FFW Fr-Opfingen","longitude":7.720299179309183,"latitude":48.00034654772901,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":2,"personal_count":15,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/23056993\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_23056993\">Details</a>"});
-        buildingMarkerAddSingle({"id":22870942,"user_id":3095453,"name":"FFW FR-Rieselfeld","longitude":7.790227994255271,"latitude":47.9958810510911,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":2,"personal_count":29,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/22870942\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22870942\">Details</a>"});
-        buildingMarkerAddSingle({"id":23067430,"user_id":3095453,"name":"FFW Fr-Tiengen","longitude":7.717016167423317,"latitude":47.98215189529174,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":null,"personal_count":13,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/23067430\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_23067430\">Details</a>"});
-        buildingMarkerAddSingle({"id":22928175,"user_id":3095453,"name":"FFW FR-Umkirch","longitude":7.764029921062173,"latitude":48.03994475444187,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":1,"personal_count":27,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/22928175\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22928175\">Details</a>"});
-        buildingMarkerAddSingle({"id":23041108,"user_id":3095453,"name":"FW-schule Freiburg","longitude":7.823702195754675,"latitude":47.983265012056364,"icon":"/images/building_fireschool.png","icon_other":"/images/building_fireschool_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":null,"personal_count":0,"building_type":1,"filter_id":"fire_school","detail_button":"<a href=\"/buildings/23041108\" building_type=\"1\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_23041108\">Details</a>"});
-        buildingMarkerAddSingle({"id":22865771,"user_id":3095453,"name":" kh Freiburg","longitude":7.837323151705538,"latitude":48.007065602036704,"icon":"/images/building_hospital.png","icon_other":"/images/building_hospital_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":3,"personal_count":0,"building_type":4,"filter_id":"hospital","detail_button":"<a href=\"/buildings/22865771\" building_type=\"4\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22865771\">Details</a>"});
-        buildingMarkerAddSingle({"id":22950366,"user_id":3095453,"name":"Leistelle Freiburg","longitude":7.830339468838897,"latitude":47.991056157343486,"icon":"/images/building_leitstelle.png","icon_other":"/images/building_leitstelle_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":null,"personal_count":0,"building_type":7,"filter_id":"dispatch_center","detail_button":"<a href=\"/buildings/22950366\" building_type=\"7\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22950366\">Details</a>"});
-        buildingMarkerAddSingle({"id":22865192,"user_id":3095453,"name":"PLZ Freiburg-nord","longitude":7.845654063442163,"latitude":47.9958810510911,"icon":"/images/building_polizeiwache.png","icon_other":"/images/building_polizeiwache_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":1,"personal_count":21,"building_type":6,"filter_id":"police_station","detail_button":"<a href=\"/buildings/22865192\" building_type=\"6\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22865192\">Details</a>"});
-        buildingMarkerAddSingle({"id":23057100,"user_id":3095453,"name":"Pol Fr-Opfingen","longitude":7.71918344906219,"latitude":47.99888920144127,"icon":"/images/building_polizeiwache.png","icon_other":"/images/building_polizeiwache_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":1,"personal_count":7,"building_type":6,"filter_id":"police_station","detail_button":"<a href=\"/buildings/23057100\" building_type=\"6\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_23057100\">Details</a>"});
-        buildingMarkerAddSingle({"id":22870211,"user_id":3095453,"name":"Pol FR-Rieselfeld","longitude":7.791366571199917,"latitude":47.9989322763062,"icon":"/images/building_polizeiwache.png","icon_other":"/images/building_polizeiwache_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":1,"personal_count":21,"building_type":6,"filter_id":"police_station","detail_button":"<a href=\"/buildings/22870211\" building_type=\"6\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22870211\">Details</a>"});
-        buildingMarkerAddSingle({"id":23067441,"user_id":3095453,"name":"Pol Fr-Tiengen","longitude":7.7182491651057115,"latitude":47.98223807293072,"icon":"/images/building_polizeiwache.png","icon_other":"/images/building_polizeiwache_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":null,"personal_count":5,"building_type":6,"filter_id":"police_station","detail_button":"<a href=\"/buildings/23067441\" building_type=\"6\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_23067441\">Details</a>"});
-        buildingMarkerAddSingle({"id":22927955,"user_id":3095453,"name":"POL FR-Zähringen","longitude":7.853678844492148,"latitude":48.02012792448133,"icon":"/images/building_polizeiwache.png","icon_other":"/images/building_polizeiwache_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":1,"personal_count":18,"building_type":6,"filter_id":"police_station","detail_button":"<a href=\"/buildings/22927955\" building_type=\"6\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22927955\">Details</a>"});
-        buildingMarkerAddSingle({"id":23007170,"user_id":3095453,"name":"Polschule freiburg","longitude":7.823906769504255,"latitude":47.98369588952127,"icon":"/images/building_polizeischule.png","icon_other":"/images/building_polizeischule_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":null,"personal_count":0,"building_type":8,"filter_id":"police_school","detail_button":"<a href=\"/buildings/23007170\" building_type=\"8\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_23007170\">Details</a>"});
-        buildingMarkerAddSingle({"id":22950279,"user_id":3095453,"name":"Pol-Umkirch","longitude":7.763549691527834,"latitude":48.03849570074616,"icon":"/images/building_polizeiwache.png","icon_other":"/images/building_polizeiwache_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":1,"personal_count":19,"building_type":6,"filter_id":"police_station","detail_button":"<a href=\"/buildings/22950279\" building_type=\"6\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22950279\">Details</a>"});
-        buildingMarkerAddSingle({"id":22960189,"user_id":3095453,"name":"Rts Freiburg","longitude":7.795404150254932,"latitude":47.98864354128941,"icon":"/images/building_rettungsschule.png","icon_other":"/images/building_rettungsschule_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":null,"personal_count":0,"building_type":3,"filter_id":"rescue_school","detail_button":"<a href=\"/buildings/22960189\" building_type=\"3\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22960189\">Details</a>"});
-        buildingMarkerAddSingle({"id":22865567,"user_id":3095453,"name":"RTW Freiburg","longitude":7.833944979070992,"latitude":48.004854727788924,"icon":"/images/building_rescue_station.png","icon_other":"/images/building_rescue_station_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":2,"personal_count":23,"building_type":2,"filter_id":"ambulance_station","detail_button":"<a href=\"/buildings/22865567\" building_type=\"2\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22865567\">Details</a>"});
-        buildingMarkerAddSingle({"id":22926810,"user_id":3095453,"name":"RTW Freiburg -Zähringen","longitude":7.853678844492148,"latitude":48.02012792448133,"icon":"/images/building_rescue_station.png","icon_other":"/images/building_rescue_station_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":2,"personal_count":22,"building_type":2,"filter_id":"ambulance_station","detail_button":"<a href=\"/buildings/22926810\" building_type=\"2\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22926810\">Details</a>"});
-        buildingMarkerAddSingle({"id":22939932,"user_id":3095453,"name":"RTW Fr-Lehen","longitude":7.801151180047669,"latitude":48.015965565562226,"icon":"/images/building_rescue_station.png","icon_other":"/images/building_rescue_station_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":2,"personal_count":17,"building_type":2,"filter_id":"ambulance_station","detail_button":"<a href=\"/buildings/22939932\" building_type=\"2\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22939932\">Details</a>"});
-        buildingMarkerAddSingle({"id":23057105,"user_id":3095453,"name":"Rtw Fr-Opf","longitude":7.718796977970503,"latitude":47.99943481373964,"icon":"/images/building_rescue_station.png","icon_other":"/images/building_rescue_station_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":1,"personal_count":8,"building_type":2,"filter_id":"ambulance_station","detail_button":"<a href=\"/buildings/23057105\" building_type=\"2\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_23057105\">Details</a>"});
-        buildingMarkerAddSingle({"id":23067457,"user_id":3095453,"name":"RTW Fr-Tiengen","longitude":7.7196620322989915,"latitude":47.983013665207565,"icon":"/images/building_rescue_station.png","icon_other":"/images/building_rescue_station_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":null,"personal_count":6,"building_type":2,"filter_id":"ambulance_station","detail_button":"<a href=\"/buildings/23067457\" building_type=\"2\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_23067457\">Details</a>"});
-        buildingMarkerAddSingle({"id":23014867,"user_id":3095453,"name":"RTW Littenweiler ","longitude":7.894369234132745,"latitude":47.98164918953037,"icon":"/images/building_rescue_station.png","icon_other":"/images/building_rescue_station_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":1,"personal_count":12,"building_type":2,"filter_id":"ambulance_station","detail_button":"<a href=\"/buildings/23014867\" building_type=\"2\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_23014867\">Details</a>"});
-        buildingMarkerAddSingle({"id":22964423,"user_id":null,"name":"Loretto Krankenhaus","longitude":7.8408062903689135,"latitude":47.98302802791759,"icon":"/images/building_hospital.png","icon_other":"/images/building_hospital_other.png","vgi":null,"lbid":22959417,"show_vehicles_at_startpage":true,"level":4,"personal_count":0,"building_type":4,"filter_id":"hospital","detail_button":"<a href=\"/buildings/22964423\" building_type=\"4\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22964423\">Details</a>"});
-        buildingMarkerAddSingle({"id":22871721,"user_id":null,"name":"Andreas Teichmann Justizvollzugsanstalt ","longitude":7.850268132057387,"latitude":48.002909367202534,"icon":"/images/building_polizeiwache.png","icon_other":"/images/building_polizeiwache_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":null,"personal_count":0,"building_type":16,"filter_id":"prison","detail_button":"<a href=\"/buildings/22871721\" building_type=\"16\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22871721\">Details</a>"});
-        buildingMarkerAddSingle({"id":22864839,"user_id":3095444,"name":"BFW-Freiburg (02)","longitude":7.83055896117908,"latitude":47.99114232011657,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":6,"personal_count":25,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/22864839\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22864839\">Details</a>"});
-        buildingMarkerAddSingle({"id":22959417,"user_id":3095444,"name":"ILTS Freiburg","longitude":7.829989682008117,"latitude":47.99096281417697,"icon":"/images/building_leitstelle.png","icon_other":"/images/building_leitstelle_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":null,"personal_count":0,"building_type":7,"filter_id":"dispatch_center","detail_button":"<a href=\"/buildings/22959417\" building_type=\"7\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22959417\">Details</a>"});
-        buildingMarkerAddSingle({"id":22959657,"user_id":3102687,"name":"Rettung freiburg 1","longitude":7.828532675458547,"latitude":47.98752048775361,"icon":"/images/building_rescue_station.png","icon_other":"/images/building_rescue_station_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":1,"personal_count":3,"building_type":2,"filter_id":"ambulance_station","detail_button":"<a href=\"/buildings/22959657\" building_type=\"2\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22959657\">Details</a>"});
-        buildingMarkerAddSingle({"id":22865562,"user_id":3095444,"name":"Malteser-Rettungswache-01","longitude":7.83773722791398,"latitude":47.990137078812594,"icon":"/images/building_rescue_station.png","icon_other":"/images/building_rescue_station_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":2,"personal_count":13,"building_type":2,"filter_id":"ambulance_station","detail_button":"<a href=\"/buildings/22865562\" building_type=\"2\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22865562\">Details</a>"});
-        buildingMarkerAddSingle({"id":22865237,"user_id":3095444,"name":"PolizeiDirektion-Freiburg-01","longitude":7.836105754813644,"latitude":47.98743001022579,"icon":"/images/building_polizeiwache.png","icon_other":"/images/building_polizeiwache_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":1,"personal_count":11,"building_type":6,"filter_id":"police_station","detail_button":"<a href=\"/buildings/22865237\" building_type=\"6\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22865237\">Details</a>"});
-        buildingMarkerAddSingle({"id":22959604,"user_id":3102692,"name":"feuerwehr freiburg1","longitude":7.8428631151995685,"latitude":47.99819281946772,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":2,"personal_count":10,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/22959604\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22959604\">Details</a>"});
-        buildingMarkerAddSingle({"id":23077857,"user_id":3112123,"name":"FF","longitude":7.8469223999999995,"latitude":47.992201099999996,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":null,"personal_count":10,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/23077857\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_23077857\">Details</a>"});
-        buildingMarkerAddSingle({"id":23063569,"user_id":3112123,"name":"ACAB","longitude":7.847091099999999,"latitude":47.9921911,"icon":"/images/building_polizeiwache.png","icon_other":"/images/building_polizeiwache_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":1,"personal_count":6,"building_type":6,"filter_id":"police_station","detail_button":"<a href=\"/buildings/23063569\" building_type=\"6\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_23063569\">Details</a>"});
-        buildingMarkerAddSingle({"id":22959679,"user_id":3102692,"name":"feuerwehr freiburg2","longitude":7.84805780856599,"latitude":47.98465098841272,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":1,"personal_count":10,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/22959679\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22959679\">Details</a>"});
-        buildingMarkerAddSingle({"id":22867195,"user_id":3095444,"name":"FFW-Freiburg-07","longitude":7.848669496652253,"latitude":47.98474434299534,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":2,"personal_count":25,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/22867195\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22867195\">Details</a>"});
-        buildingMarkerAddSingle({"id":22959532,"user_id":3102687,"name":"Feuerwehr freiburg 1","longitude":7.809453979815699,"latitude":47.989921667414194,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":1,"personal_count":13,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/22959532\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22959532\">Details</a>"});
-        buildingMarkerAddSingle({"id":23040497,"user_id":3095444,"name":"pol 3","longitude":7.828581529230254,"latitude":48.007521820048616,"icon":"/images/building_polizeiwache.png","icon_other":"/images/building_polizeiwache_other.png","vgi":null,"lbid":22959417,"show_vehicles_at_startpage":true,"level":1,"personal_count":5,"building_type":6,"filter_id":"police_station","detail_button":"<a href=\"/buildings/23040497\" building_type=\"6\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_23040497\">Details</a>"});
-        buildingMarkerAddSingle({"id":22869909,"user_id":3095444,"name":"Universitäts Klinikum Freiburg","longitude":7.8354607730566,"latitude":48.007898244394276,"icon":"/images/building_hospital.png","icon_other":"/images/building_hospital_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":20,"personal_count":0,"building_type":4,"filter_id":"hospital","detail_button":"<a href=\"/buildings/22869909\" building_type=\"4\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22869909\">Details</a>"});
-        buildingMarkerAddSingle({"id":22959643,"user_id":3102687,"name":"Feuerwehr freiburg 2","longitude":7.807401173751845,"latitude":47.982970577053436,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":1,"personal_count":13,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/22959643\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22959643\">Details</a>"});
-        buildingMarkerAddSingle({"id":22959804,"user_id":3102692,"name":"polizei 1","longitude":7.851878668143561,"latitude":48.00247147149351,"icon":"/images/building_polizeiwache.png","icon_other":"/images/building_polizeiwache_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":1,"personal_count":2,"building_type":6,"filter_id":"police_station","detail_button":"<a href=\"/buildings/22959804\" building_type=\"6\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22959804\">Details</a>"});
-        buildingMarkerAddSingle({"id":22866616,"user_id":3095444,"name":"FFW-Freiburg-06","longitude":7.803200841773734,"latitude":47.98242479065496,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":2,"personal_count":25,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/22866616\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22866616\">Details</a>"});
-        buildingMarkerAddSingle({"id":22870007,"user_id":3095444,"name":"PolizeiDirektion-Freiburg-02","longitude":7.801343516477451,"latitude":47.98224525439414,"icon":"/images/building_polizeiwache.png","icon_other":"/images/building_polizeiwache_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":1,"personal_count":11,"building_type":6,"filter_id":"police_station","detail_button":"<a href=\"/buildings/22870007\" building_type=\"6\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22870007\">Details</a>"});
-        buildingMarkerAddSingle({"id":22987462,"user_id":3095444,"name":"Rettungswache 4","longitude":7.869960665702821,"latitude":47.98661858004646,"icon":"/images/building_rescue_station.png","icon_other":"/images/building_rescue_station_other.png","vgi":null,"lbid":22959417,"show_vehicles_at_startpage":true,"level":2,"personal_count":6,"building_type":2,"filter_id":"ambulance_station","detail_button":"<a href=\"/buildings/22987462\" building_type=\"2\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22987462\">Details</a>"});
-        buildingMarkerAddSingle({"id":22871000,"user_id":3095444,"name":"DRK-Freiburg-02","longitude":7.790079331892251,"latitude":47.99265014535798,"icon":"/images/building_rescue_station.png","icon_other":"/images/building_rescue_station_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":3,"personal_count":12,"building_type":2,"filter_id":"ambulance_station","detail_button":"<a href=\"/buildings/22871000\" building_type=\"2\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22871000\">Details</a>"});
-        buildingMarkerAddSingle({"id":22866683,"user_id":3095444,"name":"FFW-Freiburg-05","longitude":7.789489329547671,"latitude":47.99635490025392,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":1,"personal_count":25,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/22866683\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22866683\">Details</a>"});
-        buildingMarkerAddSingle({"id":22959866,"user_id":3102692,"name":"feuerwehr freiburg3","longitude":7.840885333309507,"latitude":48.01886489935797,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":1,"personal_count":10,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/22959866\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22959866\">Details</a>"});
-        buildingMarkerAddSingle({"id":22959269,"user_id":3095444,"name":"FFW-Freiburg 09","longitude":7.803747468761206,"latitude":48.01750854815047,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":1,"personal_count":19,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/22959269\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22959269\">Details</a>"});
-        buildingMarkerAddSingle({"id":22960283,"user_id":3095444,"name":"Rettung freiburg 03","longitude":7.810422316261088,"latitude":48.0243330010136,"icon":"/images/building_rescue_station.png","icon_other":"/images/building_rescue_station_other.png","vgi":null,"lbid":22959417,"show_vehicles_at_startpage":true,"level":1,"personal_count":6,"building_type":2,"filter_id":"ambulance_station","detail_button":"<a href=\"/buildings/22960283\" building_type=\"2\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22960283\">Details</a>"});
-        buildingMarkerAddSingle({"id":22928946,"user_id":3095444,"name":"FFW-Freiburg 03","longitude":7.847167244532992,"latitude":48.02629190418288,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":null,"personal_count":19,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/22928946\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22928946\">Details</a>"});
-        buildingMarkerAddSingle({"id":22960088,"user_id":3095444,"name":"FFW-Freiburg 14","longitude":7.8132749049959935,"latitude":48.03763485747054,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":22959417,"show_vehicles_at_startpage":true,"level":1,"personal_count":16,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/22960088\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22960088\">Details</a>"});
-        buildingMarkerAddSingle({"id":23066341,"user_id":3095444,"name":"Feuerwehr Wolfenweiler","longitude":7.762730892524836,"latitude":47.96005694878708,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":22959417,"show_vehicles_at_startpage":true,"level":1,"personal_count":13,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/23066341\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_23066341\">Details</a>"});
-        buildingMarkerAddSingle({"id":22960153,"user_id":3102687,"name":"Feuerwehr freiburg 3","longitude":7.802133854259311,"latitude":48.04952183093706,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":null,"personal_count":10,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/22960153\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22960153\">Details</a>"});
-        buildingMarkerAddSingle({"id":23066306,"user_id":3095444,"name":"Feuerwehr Bad-Krozingen","longitude":7.69767038829838,"latitude":47.920081030819354,"icon":"/images/building_fire.png","icon_other":"/images/building_fire_other.png","vgi":null,"lbid":22959417,"show_vehicles_at_startpage":true,"level":1,"personal_count":13,"building_type":0,"filter_id":"firehouse","detail_button":"<a href=\"/buildings/23066306\" building_type=\"0\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_23066306\">Details</a>"});
-
-
-
-        buildingMarkerBulkContentCacheDraw(true);
-
-            $("#building_no").hide();
-
-
-
-                buildingMarkerAddSingle({"id":22964423,"user_id":null,"name":"Loretto Krankenhaus","longitude":7.8408062903689135,"latitude":47.98302802791759,"icon":"/images/building_hospital.png","icon_other":"/images/building_hospital_other.png","vgi":null,"lbid":22959417,"show_vehicles_at_startpage":true,"level":4,"personal_count":0,"building_type":4,"filter_id":"hospital","detail_button":"<a href=\"/buildings/22964423\" building_type=\"4\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22964423\">Details</a>"});
-                buildingMarkerAddSingle({"id":22871721,"user_id":null,"name":"Andreas Teichmann Justizvollzugsanstalt ","longitude":7.850268132057387,"latitude":48.002909367202534,"icon":"/images/building_polizeiwache.png","icon_other":"/images/building_polizeiwache_other.png","vgi":null,"lbid":0,"show_vehicles_at_startpage":true,"level":null,"personal_count":0,"building_type":16,"filter_id":"prison","detail_button":"<a href=\"/buildings/22871721\" building_type=\"16\" class=\"btn btn-xs pull-right btn-default lightbox-open\" id=\"building_button_22871721\">Details</a>"});
-        building_maps_redraw();
-        building_load_alliance();
-        missionMarkerDistanceUpdate();
-        buildingSelectionLoad();
-        $("#building_panel_body").scroll(function() {
-            clearTimeout($.data(this, 'scrollTimerBuildings'));
-            $.data(this, 'scrollTimerBuildings', setTimeout(function() {
-                buildingsVehicleLoadVisible();
-            }, 200));
-        });
-        checkBuildingListWrap();
-
-        alliance_member_buildings_show = true
-        creditsUpdate(157155);
-        coinsUpdate(16);
-
-        $('.building_selection').click(function() {buildingSelection($(this)); return false;});
-        $('.building_selection').dblclick(function() {buildingSelectionOnly($(this)); return false;});
-
-        $('.search-station-input').val('');
-        $('.search-station-input').keyup(function() { filterBuildingsList(this); });
-
-    }
-</script>
-<script type="text/javascript">
-    $(function() {
-        domreadyjs();
-    });
-
-    var dom_ready_executed = false;
-
-    function filterBuildingsList(searchElement) {
-        var searchString = $(searchElement).val().toLowerCase();
-        var searchClass = $(searchElement).attr("search_class");
-
-        $("." + searchClass).each(function() {
-            var isItemMatched = $(this).attr('search_attribute').toLowerCase().indexOf(searchString) !== -1;
-            if (isItemMatched) {
-                $(this).removeClass('building-filtered-by-search')
-            } else {
-                $(this).addClass('building-filtered-by-search')
-            }
-        });
-
-        buildingsVehicleLoadVisible();
-    }
-
-    function checkBuildingListWrap() {
-        var buildingHeaderChildren = document.getElementById('building_panel_heading').children;
-        var firstOffset = buildingHeaderChildren[0].offsetTop;
-        var isWrapped = false;
-        for (var child of buildingHeaderChildren) {
-            if (child.offsetTop != firstOffset) {
-                isWrapped = true;
-            }
-        }
-        if (isWrapped) {
-            $('.building-list-header-block').each(function() { $(this).addClass('header-is-wrapped'); })
-        } else {
-            $('.building-list-header-block').each(function() { $(this).removeClass('header-is-wrapped'); })
-        }
-    }
-
-    //setTimeout(function() { if (!dom_ready_executed) {domreadyjs()} }, 2000);
-
-    var mission_count_max = 11;
-    var timed_mission_count_max = 4;
-</script>
-
-		</div>
-  </div>
-
-
-
-	<div class="col-sm-4 overview_outer bigMapWindow" id="chat_outer">
-		<div class="panel panel-default" id="chat_panel">
-		  <div class="panel-heading big_map_window_head"  id="chat_panel_heading">
-
-				<div class="btn-group pull-right" style="margin-top: 3px;">
-					<button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<img src="/images/icons8-volume_up_dark.svg" style="width:15px;height:15px;">
-					</button>
-					<ul class="dropdown-menu">
-						<li><a href="/profile/audio-chat" class="" id="audio_chat_switch">Allgemeine Nachricht: <span id='current_audio_chat'>Aus</span></a></li>
-						<li><a href="/profile/audio-chat?highlight=1" class="" id="audio_chat_highlight_switch">Private Ansprache: <span id='current_audio_chat_highlight'>Aus</span></a></li>
-					</ul>
-				</div>
-
-				Chat
-
-				<div class="clearfix"></div>
-			</div>
-		  <div class="panel-body" id="chat_panel_body">
-				<div id="alliance_chat" class="sidebar-nav alliance_true">
-					<div id="alliance_chat_header_info" class="alert alert-info" style="display:none;">
-
-					</div>
-
-						<form accept-charset="UTF-8" action="/alliance_chats" class="simple_form form-horizontal" id="new_alliance_chat" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="kw1go3FCfGOMXQPtn8nYPSevBa8rqJgUTHqu58MJgwU=" /></div>
-							<div class="input-group string required alliance_chat_message"><div class="input-group-addon"><label class="string required " for="alliance_chat_message"><abbr title="required">*</abbr> Nachricht</label></div><input class="string required form-control" id="alliance_chat_message" name="alliance_chat[message]" size="50" style="width:100%;" type="text" /></div>
-</form>
-					<div id="mission_chat_ban_message" class="alert alert-danger" style="display: none;">
-						Du bist im Verbandschat gebannt.<br>
-						Gebannt von: <span id="mission_chat_ban_message_admin"></span><br>
-						Restzeit: <span id="mission_chat_ban_message_timer"></span>
-
-					</div>
-					<ul id="mission_chat_messages">
-					</ul>
-
-
-					<a href="/alliance_chats" class="lightbox-open btn-xs btn-default btn pull-right"><span class='glyphicon glyphicon-book'></span> Chatverlauf</a>
-					<div class="clearfix"></div>
-				</div>
-
-
-        <div id="alliance_chat" class="alliance_false">
-          <div class="alert alert-info info-bubble-with-button">
-            <a href="/alliances" class='btn btn-default btn-xs lightbox-open info-bubble-button-xs'>Bewerben</a>
-            Der Chat ermöglicht dir, dich mit anderen erfahrenen Spielern zu vernetzen. Sie können sowohl deine Fragen zum Spiel beantworten als auch helfen, indem sie dir Zugriff auf ihre Gebäude wie Schulen oder Krankenhäuser geben.
-          </div>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Vereinslogo">
         </div>
-
-      </div>
-		</div>
-
-	</div>
-
-	<div class="col-sm-4 overview_outer bigMapWindow" id="radio_outer">
-		<div id="radio" class="sidebar-nav">
-			<div class="panel panel-default ">
-			  <div class="panel-heading big_map_window_head" id="radio_panel_heading">
-					<div class="flex-row flex-nowrap justify-between align-items-center" style="gap: 5px;">
-						<div class="flex-grow-1">
-							Funk
-						</div>
-
-						<div class="flex-fixed-size">
-								<a href="#" class="btn_alliance_radio btn btn-danger btn-xs pull-right" id="alliance_radio_off">Verbandsfunk: Aus</a>
-								<a href="#" class="btn_alliance_radio btn btn-success btn-xs pull-right" id="alliance_radio_on">Verbandsfunk: An</a>
-
-								<script>
-									alliance_ignore_fms_set(false, false);
-								</script>
-
-						</div>
-
-							<div id='tooltip-radio' class="tooltip-mc flex-fixed-size">
-								<img src="/images/info_dark.png" style="width: 18px;height:18px;">
-							</div>
-					</div>
-
-				</div>
-			  <div class="panel-body" id="radio_panel_body">
-
-				 		<div id="radio_no_message" class="alert alert-info">
-				 			Es sind keine Funksprüche eingegangen.
-			 			</div>
-						<ul id="radio_messages_important">
-
-						</ul>
-						<ul id="radio_messages">
-
-						</ul>
-
-				</div>
-		  </div>
-		</div>
-	</div>
-</div>
-
-	<nav id="navbar-mobile-footer" class="navbar navbar-default navbar-fixed-bottom visible-xs">
-	  <div class="container-fluid">
-
-	    <div class="navbar-header" style="text-align:center;">
-
-
-					<div class="btn-group " style="margin: 0 auto; ">
-						<a href="#" class="btn btn-default btn-xs navbar-btn mobile-navbar-selector" target_element="map">Karte</a>
-						<a href="#" class="btn btn-default btn-xs navbar-btn mobile-navbar-selector" target_element="missions">Einsätze</a>
-						<a href="#" class="btn btn-default btn-xs navbar-btn mobile-navbar-selector" target_element="buildings">Wachen</a>
-						<a href="#" class="btn btn-default btn-xs navbar-btn mobile-navbar-selector" target_element="chat">Chat</a>
-						<a href="#" class="btn btn-default btn-xs navbar-btn mobile-navbar-selector" target_element="radio">Funk</a>
-					</div>
-	    </div>
-	  </div>
-	</nav>
-
-<div id ="update_tos_modal" class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-sm" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">
-          Allgemeine Geschäftsbedingungen
-        </h4>
-      </div>
-      <div class="modal-body">
-        Die <a href="/agb" target="_blank">Nutzungsbedingungen</a> haben sich geändert.
-        </br>
-        </br>
-        Bitte akzeptiere diese, um weiterzuspielen.
-      </div>
-      <div class="modal-footer">
-        <div class="form-actions">
-          <form action="/profile/accept_tos" class="button_to" method="post"><div><input class="btn btn-success accept_tos" data-disable-with="Lade..." type="submit" value="Akzeptieren" /><input name="authenticity_token" type="hidden" value="kw1go3FCfGOMXQPtn8nYPSevBa8rqJgUTHqu58MJgwU=" /></div></form>
-          <form action="/users/sign_out" class="button_to" method="post"><div><input name="_method" type="hidden" value="delete" /><input class="btn btn-danger reject_tos" data-confirm="Bist du sicher, dass du die Allgemeinen Geschäftsbedingungen nicht akzeptierst? Wenn du dies bestätigst, wirst du ausgeloggt." type="submit" value="Logout" /><input name="authenticity_token" type="hidden" value="kw1go3FCfGOMXQPtn8nYPSevBa8rqJgUTHqu58MJgwU=" /></div></form>
-        </div>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-
-
-
-
-
-
-<script>
-  $(document).ready(function(){
-  });
-
-	$('#tooltip-radio').on('click', function () {
-		let url = "https://xyrality.helpshift.com/a/mission-chief/?s=gameplay&f=what-are-the-small-numbers-in-the-colored-boxes-next-to-the-vehicles";
-		let helpshift_id = "1540";
-
-		openHelpshiftArticle(url, helpshift_id);
-	});
-
-  $(function () {
-    $("#register_for_newsletter_close").click(function () {
-      hideNewsletterMessage();
-      $.ajax('/newsletters/dont_show_register_for_newsletter')
-    });
-  })
-
-  function hideNewsletterMessage() {
-    $('#register_for_newsletter').hide();
-  }
-
-
-	$(function(){
-		missionSelectionUpdateButtons();
-
-
-
-
-
-		mobileBridgeAdd("mobile_push_channel", {list: ["de_DE-news","d674502bd0e560328a6376338a1fddc32d31dbfc","618823866c486314033da819866605296e469c4a","temp1737485355"]});
-
-
-		$(".mobile-navbar-selector").click(function(){
-			mobileShow($(this).attr("target_element"));
-		});
-
-		if ($("#navbar-mobile-footer").is(":visible")) {
-        mobileShow("map");
-		}
-
-
-    filtersData = {"inactive_filters":{}}
-
-		$('.mission_selection').click(function(e) {e.preventDefault(); missionSelection($(this)); return false;});
-		$('.mission_selection').dblclick(function(e) {e.preventDefault(); missionSelectionOnly($(this)); return false;});
-		buildingSelectionLoad();
-		missionSelectionLoad();
-    updateMissionFilterQueryParams();
-
-			mission_label = false;
-			vehicle_label = false;
-
-
-			vehicle_graphics = [["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/137/915/original/FF_SLFKatS_ohne.png?1600788981","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/137/915/original/FF_SLFKatS_mit.png?1600788981","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/138/819/original/BF_HLFB_ohne.png?1600766067","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/138/819/original/BF_HLFB_mit.png?1600766067","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/139/170/original/BFS_DLK23-12_ohne.png?1617455792","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/139/170/original/BFS_DLK23-12_mit.png?1617626180","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/139/187/original/BF_ELW1_ohne.png?1600779669","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/139/187/original/BF_ELW1_mit.png?1600779670","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/137/965/original/BF_RW-S_ohne.png?1600775247","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/137/965/original/BF_RW-S_mit.png?1600775247","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/137/571/original/BF_GW-AM_ohne.png?1600764058","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/137/571/original/BF_GW-AM_mit.png?1600764059","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/143/921/original/FF_LF8-6_ohne.png?1600788277","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/143/921/original/FF_LF8-6_mit.png?1600788277","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/138/604/original/BF_HLFA_ohne.png?1600765703","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/138/604/original/BF_HLFA_mit.png?1632384258","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/143/062/original/FF_HLF10-6_ohne.png?1647450269","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/143/062/original/FF_HLF10-6_mit.png?1647450269","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/147/203/original/BF_PKW59_ohne.png?1600773984","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/147/203/original/BF_PKW59_mit.png?1600774125","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/139/762/original/BF_RW-U_ohne.png?1600775597","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/139/762/original/BF_RW-U_mit.png?1600775597","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/145/719/original/FF_GW-Log_ohne.png?1600786297","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/145/719/original/FF_GW-Log_mit.png?1600786297","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/137/570/original/FFS_GW-Mess_ohne.png?1600786563","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/137/570/original/FFS_GW-Mess_mit.png?1600786564","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/140/160/original/BF_KEF-T_ohne.png?1600768780","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/140/160/original/BF_KEF-T_mit.png?1600768780","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/144/051/original/FF_SW2000_ohne.png?1600792896","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/144/051/original/FF_SW2000_mit.png?1600792897","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/144/348/original/FF_SW2000-Tr_ohne.png?1600793541","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/144/348/original/FF_SW2000-Tr_mit.png?1600793542","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/163/775/original/FF_GW-L_ohne.png?1600786115","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/163/775/original/FF_GW-L_mit.png?1600786115","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/153/660/original/BF_GW-T1_ohne.png?1600764640","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/153/660/original/BF_GW-T1_mit.png?1600764641","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/139/591/original/FFS_GTLF_ohne.png?1600785851","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/139/591/original/FFS_GTLF_mit.png?1600785851","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/146/857/original/FF_TLF8-18-2_ohne.png?1600846480","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/146/857/original/FF_TLF8-18-2_mit.png?1600846480","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/143/696/original/FF_TLF8-18_ohne.png?1600846101","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/143/696/original/FF_TLF8-18_mit.png?1600846101","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/149/603/original/AC-Mess_ohne.png?1600780303","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/149/603/original/AC-Mess_mit.png?1600780303","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/151/476/original/BF_HLF-Ba.D._ohne.png?1600765358","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/151/476/original/BF_HLF-Ba.D._mit.png?1600765358","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/157/181/original/SSB_Manager_ohne.png?1600703625","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/157/181/original/SSB_Manager_mit.png?1600703625","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/157/182/original/DB_NM_ohne.png?1600701315","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/157/182/original/DB_NM_mit.png?1600701315","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/158/874/original/FF_RW1_ohne.png?1600791339","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/158/874/original/FF_RW1_mit.png?1600791339","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/160/172/original/BF_GW-T2_ohne.png?1600765039","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/160/172/original/BF_GW-T2_mit.png?1600765039","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/147/160/original/BPOL_fustwbmw_ohne.png?1549710334","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/147/160/original/BPOL_fustwbmw_mit.png?1549710334","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/137/564/original/BF_RTW_ohne.png?1600774887","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/137/564/original/BF_RTW_mit.png?1600774888","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/137/565/original/BFS_NEF_ohne.png?1641564574","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/137/565/original/BFS_NEF_mit.png?1641564582","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/142/677/original/FF_HLF20_ohne.png?1600787873","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/142/677/original/FF_HLF20_mit.png?1600787873","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/145/925/original/BF_ELW1_ohne.png?1693048713","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/145/925/original/BF_ELW1_mit.png?1693048713","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/140/700/original/FuStW_Ba-W%C3%BCBMVito_ohne.png?1600687750","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/140/700/original/FuStW_Ba-W%C3%BCBMVito_mit.png?1600687750","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/139/628/original/BF_GW-Spezial_ohne.png?1600764382","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/139/628/original/BF_GW-Spezial_mit.png?1600764382","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/139/541/original/BF_ELW2_ohne.png?1600762808","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/139/541/original/BF_ELW2_mit.png?1600762809","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/142/062/original/POL_leBefKw_ohne.png?1600687774","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/142/062/original/POL_leBefKw_mit.png?1600687774","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/138/977/original/FFS_MTWT5_ohne.png?1600789457","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/138/977/original/FFS_MTWT5_mit.png?1601033412","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/137/871/original/FF_TSF-W_ohne.png?1600847212","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/137/871/original/FF_TSF-W_mit.png?1600847212","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/142/892/original/BF_KDOWSBMW_ohne.png?1600766549","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/142/892/original/BF_KDOWSBMW_mit.png?1600766549","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/139/794/original/FF_MTW_ohen.png?1600789695","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/139/794/original/FF_MTW_mit.png?1600789696","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/151/272/original/ZPKW_PolKDD_ohne.png?1606583629","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/151/272/original/ZPKW_PolKDD_mit.png?1606583630","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/230/427/original/FuStW_PolGLC_F-Cell_ohne.png?1606597378","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/230/427/original/FuStW_PolGLC_F-Cell_mit.png?1606597379","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/238/481/original/BFS_HLFAFZ_ohne.png?1611513966","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/238/481/original/BFS_HLFAFZ_mit.png?1611513966","true"],null,["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/141/012/original/anh_dle_ohne.png?1546454357","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/141/012/original/anh_dle_ohne.png?1546454358","true"],null,["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/139/778/original/BF_WLF_ohne.png?1600776356","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/139/778/original/BF_WLF_mit.png?1600776357","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/139/895/original/BF_AB-Schiene_ohne.png?1600779070","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/139/895/original/BF_AB-Schiene_mit.png?1600779070","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/139/792/original/BF_AB-AS_DEKO_ohne.png?1600778479","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/139/792/original/BF_AB-AS_DEKO_mit.png?1600778479","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/160/017/original/BF_WLFMULDE_ohne.png?1600778927","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/160/017/original/BF_WLFMULDE_mit.png?1600778927","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/195/515/original/POLBW_HGruKwMBSpinter_ohne.png?1600687788","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/195/515/original/POLBW_HGruKwMBSpinter_mit.png?1600687789","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/143/111/original/F%C3%BCKw_BA-W%C3%BCVito_ohne.png?1600687806","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/143/111/original/F%C3%BCKw_BA-W%C3%BCVito_mit.png?1600687807","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/170/678/original/PolBW_GefKwVWT5_ohne.png?1607771502","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/170/678/original/PolBW_GefKwVWT5_mit.png?1607771503","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/155/410/original/FF_Dekon-P_ohne.png?1600780934","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/155/410/original/FF_Dekon-P_mit.png?1600780935","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/139/793/original/BF_FF_WLFABDEKONV_ohne.png?1600778612","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/139/793/original/BF_FF_WLFABDEKONV_mit.png?1600778613","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/160/308/original/BF_NEF_a.D._ohne.png?1600773565","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/160/308/original/BF_NEF_a.D._mit.png?1600773565","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/160/847/original/BPOL_FuStWMBVito_ohne.png?1587581167","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/160/847/original/BPOL_FuStWMBVito_mit.png?1587581168","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/160/151/original/BF_FwK_ohne.png?1600763268","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/160/151/original/BF_FwK_mit.png?1600763268","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/162/544/original/FF_MTWT4_ohne.png?1600789336","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/162/544/original/FF_MTWT4_mit.png?1600789337","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/162/853/original/Neutral.png?1594843961","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/162/853/original/Neutral.png?1594843961","true"],null,null,["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/140/103/original/BF_AB-HFS_ohne.png?1600778776","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/140/103/original/BF_AB-HFS_mit.png?1600778777","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/139/629/original/BF_GW-Spezial_ohne.png?1600764403","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/139/629/original/BF_GW-Spezial_mit.png?1600764403","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/141/954/original/FF_GW-W_ohne.png?1600786963","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/141/954/original/FF_GW-W_mit.png?1600786963","true"],null,["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/207/699/original/BFS_KdoWDD_ohne.png?1600767478","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/207/699/original/BFS_KdoWDD_mit.png?1600767479","true"],null,null,null,["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/144/070/original/FF_RTB_ohne.png?1600790970","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/144/070/original/FF_RTB_mit.png?1600790970","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/165/336/original/BW_KdoW12_ohne.png?1600768192","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/165/336/original/BW_KdoW12_mit.png?1600768192","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/146/934/original/Neutral.png?1594843979","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/146/934/original/Neutral.png?1594843979","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/137/566/original/BFS_GRTW_ohne.png?1647275384","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/137/566/original/BFS_GRTW_mit.png?1647275384","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/141/425/original/BF_SRTW_ohne.png?1600846846","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/141/425/original/BF_SRTW_mit.png?1600846847","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/163/893/original/FF_TSF(-W)_ohne.png?1600846816","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/163/893/original/FF_TSF(-W)_mit.png?1600846817","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/165/278/original/BF_KdoW60_ohne.png?1600767803","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/165/278/original/BF_KdoW60_mit.png?1600767803","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/139/892/original/BF_AB-U_ohne.png?1600779262","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/139/892/original/BF_AB-U_mit.png?1600779262","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/165/370/original/BF_KdoWAmtsleitung_ohne.png?1600766735","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/165/370/original/BF_KdoWAmtsleitung_mit.png?1600766735","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/145/926/original/Pol_SEKZF_ohne.png?1564435856","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/145/926/original/Pol_SEKZF_mit.png?1564435856","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/165/393/original/SEK-MTF_Ba-W%C3%BCSprinter_ohne.png?1592647160","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/165/393/original/SEK-MTF_Ba-W%C3%BCSprinter_mit.png?1592647161","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/148/050/original/POL_MEKZF_ohne.png?1550609132","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/148/050/original/POL_MEKZF_mit.png?1550609132","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/170/726/original/MEK_MTF_ohne.png?1569758774","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/170/726/original/MEK_MTF_mit.png?1569758774","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/197/900/original/BF_MTW_ohne.png?1600773120","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/197/900/original/BF_MTW_mit.png?1600773120","true"],null,["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/152/402/original/FF_DLK_ohne.png?1600785564","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/152/402/original/FF_DLK_mit.png?1600785565","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/147/482/original/BF_AB-Schiene_ohne.png?1600779100","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/147/482/original/BF_AB-Schiene_mit.png?1600779101","true"],["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/213/229/original/BF_MTWSprinter2019_ohne.png?1600769086","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/213/229/original/BF_MTWSprinter2019_mit.png?1600769086","true"],null,null,null,null,null,null,null,["https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/images/000/232/313/original/PolBW_R1200RT_ohne.png?1608037781","https://leitstellenspiel.s3.amazonaws.com/vehicle_graphic_images/image_sonderrechtes/000/232/313/original/PolBW_R1200RT_mit.png?1608037782","true"]];
-		missionSpeed(6);
-		alliance_show_not_involved_vehicle = false;
-		missionMarkerReset();
-
-		missionMarkerBulkAdd = true;
-
-
-
-
-
-		
-
-
-
-
-		missionMarkerBulkAdd = false;
-
-		missionMarkerBlukDraw();
-
-
-		missionSelectionUpdateButtons();
-		progressBarScrollUpdate();
-
-		alliance_ignore_fms_set(false, false);
-
-    addMissionParticipations([])
-
-
-
-
-
-
-
-
-
-
-
-
-
-			allianceChatHeaderInfo('Tretet unserem Discord bei Link im Forum ')
-
-		initSorting();
-
-    const $filtersDisplayControl = $('.filters-display-control')
-    $filtersDisplayControl.data('collapsed', filtersData.filters_collapsed)
-    $('.mission-filters').toggleClass('hidden', filtersData.filters_collapsed)
-    setFilterControlAria(filtersData.filters_collapsed)
-
-    initCollapseButton($filtersDisplayControl, (isCollapsed) => {
-      setFilterControlAria(isCollapsed)
-      debouncedSaveFilters({ filters_collapsed: isCollapsed })
-      $('.mission-filters').toggleClass('hidden', isCollapsed)
-      bigMapWindowSizeChanged();
-      if (currentMobileTab !== null) {
-        mobileShow(currentMobileTab);
-      }
-    })
-
-    function setFilterControlAria(isCollapsed) {
-      const label = isCollapsed ? I18n.t('map.mission_filters.dropdown_collapsed_description') : I18n.t('map.mission_filters.dropdown_open_description')
-      $filtersDisplayControl.attr('aria-label', label)
-    }
-
-    bigMapWindowSizeChanged();
-	});
-</script>
-<script type="text/javascript">
-    var continue_tutorial = false
-    var tutorialView = "mapIndex"
-    var has_tutorial = false
-        if(typeof tutorial !== "undefined" && has_tutorial){
-            tutorial.init(continue_tutorial,tutorialView)
-        }
-</script>
-
-
-
-<script>
-  $('.mission-speed-btn').click(function (e) {
-    e.preventDefault()
-    $.ajax({
-      url: $(this).find('a').attr('href'),
-      type: 'GET',
-      dataType: 'json',
-      error: () => {
-        $('.mission-speed-error').removeClass('hidden')
-      },
-    })
-  })
-
-  $('.mission-speed-error .close').click(function (e) {
-    $('.mission-speed-error').addClass('hidden')
-  })
-</script>
-
-
-
-					<hr id="footer_hr">
-		      <footer class="footer hidden-xs">
-            <div style="text-align: right; margin-bottom: 5px;">
-              <div class="social-media-links">
-    <a href="https://forum.leitstellenspiel.de" target="_blank" title="Forum">
-      <img alt="Forum" src="/images/socials/forum.svg" />
-</a>    <a href="https://blog.leitstellenspiel.de/blog/" target="_blank" title="Blog (Neuigkeiten)">
-      <img alt="Blog" src="/images/socials/blog.svg" />
-</a>    <a href="https://www.facebook.com/Leitstellenspiel.de" target="_blank" title="Facebook (Neuigkeiten)">
-      <img alt="Facebook" src="/images/socials/facebook.svg" />
-</a>    <a href="https://www.instagram.com/leitstellenspiel/" target="_blank" title="Instagram">
-      <img alt="Instagram" src="/images/socials/instagram.svg" />
-</a>    <a href="https://www.tiktok.com/@leitstellenspiel.de" target="_blank" title="TikTok">
-      <img alt="Tiktok" src="/images/socials/tiktok.svg" />
-</a>    <a href="https://t.me/LeitstellenspielBot" target="_blank" title="Telegram">
-      <img alt="Telegram" src="/images/socials/telegram.svg" />
-</a>    <a href="https://twitter.com/_LSS_DE" target="_blank" title="Twitter">
-      <img alt="Twitter" src="/images/socials/twitter.svg" />
-</a></div>
-
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#costume">Unser Häs</a></li>
+                <li><a href="#events">Termine</a></li>
+                <li><a href="#gallery">Bilder</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li>
+                    <input type="text" placeholder="Suche..." class="search-bar">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="banner">
+            <div class="image-slider">
+                <div class="caption">Hemdglunkerumzug 2023</div>
             </div>
-            <p>
-		        	<span class="pull-right">
-			        	<a href="/impressum">Impressum</a>
-			        	 ·
-			        	<a href="/agb">AGB</a>
-			        	 ·
-			        	<a href="/datenschutz">Datenschutz</a>
-			        	 ·
-			        	<a href="/toplist" class="lightbox-open">Toplist</a>
-			        	·
-			        	<a href="/einsaetze" class="lightbox-open">Mögliche Einsätze</a>
-                  ·
-                  <a href="https://wiki.leitstellenspiel.de/index.php?title=Hauptseite" target="_blank">Anleitung / Wiki</a>
-                ·
-                <a href="https://xyrality.helpshift.com/a/mission-chief/?p=web" target="_blank">FAQ</a>
+            <a href="#membership" class="cta-button">Jetzt Mitglied werden</a>
+        </section>
 
-			        	<br>
+        <section class="quick-links">
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+            <a href="#guestbook">Gästebuch</a>
+        </section>
 
-		        	</span>
-            <div class="clearfix"></div>
-              <span class="pull-right">
-                  
-                  <a href="https://www.meldkamerspel.com" onclick="return switchWorld(this.href);"><img src='/images/nl.png' alt='Meldkamerspel.com'></a>
-                  <a href="https://www.missionchief.com" onclick="return switchWorld(this.href);"><img src='/images/us.png' alt='MissionChief.com'></a>
-                  <a href="https://www.missionchief.co.uk" onclick="return switchWorld(this.href);"><img src='/images/gb.png' alt='MissionChief.co.uk'></a>
-                  <a href="https://www.centro-de-mando.es" onclick="return switchWorld(this.href);"><img src='/images/es.png' alt='Centro-de-mando.es'></a>
-                  <a href="https://www.missionchief-australia.com" onclick="return switchWorld(this.href);"><img src='/images/au.png' alt='MissionChief-Australia.com'></a>
-                  <a href="https://www.operatorratunkowy.pl" onclick="return switchWorld(this.href);"><img src='/images/pl.png' alt='operatorratunkowy.pl'></a>
-                  <a href="https://www.larmcentralen-spelet.se" onclick="return switchWorld(this.href);"><img src='/images/se.png' alt='larmcentralen-spelet.se'></a>
-                  <a href="https://www.operatore112.it" onclick="return switchWorld(this.href);"><img src='/images/it.png' alt='operatore112.it'></a>
-                  <a href="https://www.operateur112.fr" onclick="return switchWorld(this.href);"><img src='/images/fr.png' alt='operateur112.fr'></a>
-                  <a href="https://www.dispetcher-112.com" onclick="return switchWorld(this.href);"><img src='/images/ru.png' alt='dispetcher.112.com'></a>
-                  <a href="https://www.alarmcentral-spil.dk" onclick="return switchWorld(this.href);"><img src='/images/dk.png' alt='alarmcentral-spil.dk'></a>
-                  <a href="https://www.nodsentralspillet.com" onclick="return switchWorld(this.href);"><img src='/images/no.png' alt='Nodsentralspillet.com'></a>
-                  <a href="https://www.operacni-stredisko.cz" onclick="return switchWorld(this.href);"><img src='/images/cz.png' alt='Operacni-stredisko.cz'></a>
-                  <a href="https://www.112-merkez.com" onclick="return switchWorld(this.href);"><img src='/images/tr.png' alt='112-merkez'></a>
-                  <a href="https://www.jogo-operador112.com" onclick="return switchWorld(this.href);"><img src='/images/pt.png' alt='jogo-operador112.com'></a>
-                  <a href="https://www.operador193.com" onclick="return switchWorld(this.href);"><img src='/images/br.png' alt='operador193.com'></a>
-                  <a href="https://www.dyspetcher101-game.com" onclick="return switchWorld(this.href);"><img src='/images/ua.png' alt='dyspetcher101-game.com'></a>
-                  <a href="https://www.missionchief-korea.com" onclick="return switchWorld(this.href);"><img src='/images/kr.png' alt='missionchief-korea.com'></a>
-                  <a href="https://www.centro-de-mando.mx" onclick="return switchWorld(this.href);"><img src='/images/mx.png' alt='centro-de-mando.mx'></a>
-                  <a href="https://www.missionchief-japan.com" onclick="return switchWorld(this.href);"><img src='/images/jp.png' alt='missionchief-japan.com'></a>
-                  <a href="https://www.jocdispecerat112.com" onclick="return switchWorld(this.href);"><img src='/images/ro.png' alt='jocdispecerat112.com'></a>
-                  <a href="https://www.hatakeskuspeli.com" onclick="return switchWorld(this.href);"><img src='/images/fi.png' alt='hatakeskuspeli.com'></a>
-                  <a href="https://www.dispecerske-centrum.com" onclick="return switchWorld(this.href);"><img src='/images/sk.png' alt='dispecerske-centrum.com'></a>
-                </span>
-            <div class="clearfix"></div>
-            <span class="pull-right">
-						 		<small>
-			        		&copy; <a href="https://www.shplay.de" target="_blank">SHPlay GmbH</a> - <a href="https://icons8.com">Icon pack by Icons8</a>
+        <section id="about">
+            <h2>Über uns</h2>
+            <p>Hier steht die Geschichte des Vereins...</p>
+            <h3>Mission Statement</h3>
+            <p>Hier steht die Mission des Vereins...</p>
+        </section>
 
-		        		</small>
-			        </span>
+        <section id="costume">
+            <h2>Unser Häs</h2>
+            <p>Hier steht eine detaillierte Beschreibung der Kostüme...</p>
+        </section>
 
- 							<div class="clearfix"></div>
+        <section id="events">
+            <h2>Termine</h2>
+            <p>Hier steht der Veranstaltungskalender...</p>
+        </section>
 
+        <section id="gallery">
+            <h2>Bilder</h2>
+            <p>Hier steht die Fotogalerie...</p>
+        </section>
 
+        <section id="videos">
+            <h2>Videos</h2>
+            <p>Hier stehen die Videos...</p>
+        </section>
 
+        <section id="membership">
+            <h2>Mitgliedschaft</h2>
+            <p>Hier stehen die Vorteile der Mitgliedschaft...</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Interesse bekunden</button>
+            </form>
+        </section>
 
+        <section id="contact">
+            <h2>Kontakt</h2>
+            <form>
+                <label for="contact-name">Name:</label>
+                <input type="text" id="contact-name" name="contact-name" required>
+                <label for="contact-email">E-Mail:</label>
+                <input type="email" id="contact-email" name="contact-email" required>
+                <label for="subject">Betreff:</label>
+                <input type="text" id="subject" name="subject" required>
+                <label for="message">Nachricht:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Absenden</button>
+            </form <div id="map">
+                <!-- Hier könnte eine Google Map eingebettet werden -->
+            </div>
+        </section>
+    </main>
 
-		        	<br><br><br><br><br><br>
-		        </p>
-		      </footer>
-	    </div> <!-- /container -->
-
-
-
-  <div class="not-enough-coins-popup-container">
-  </div>
-
-		<div id="lightbox_background"></div>
-	<div id="lightbox_box">
-		
-		
-		<button type="button" class="close"  id="lightbox_close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	</div>
-
-
-	<div class="alert alert-success " id="important_messages_success">
-
-	</div>
-
-
-
-
-
-
-	<div id="ajax_temp"></div>
-
-
-
-
-
-
-
-		<script>
-	$(function() {
-		creditsUpdate(157155);
-		coinsUpdate(16);
-		messageUnreadUpdate(0);
-	});
-</script>
-
-
-
-		<script>
-			var user_id = 3095453;
-      var user_email = "joachimrohra@gmx.de";
-      var user_name = "jojorohra";
-			audio = true;
-			audio_chat = false;
-      audio_chat_highlight = false;
-
-			alliance_coadmin = false
-			alliance_admin = false
-      alliance_owner = false
-
-
-			var user_premium = false;
-			var mouse_over_disable_inactive_elements = true;
-			var lightbox_static = false;
-			var mobile_show_vehicle = true;
-			var show_vehicle = true;
-
-        var route_show = false;
-        var count_down_product = {"type":"special","time":"1737566131614"};
-      setCountdownProduct(count_down_product);
-
-      function setCountdownProduct(product) {
-        sale_count_down = new Date(+product.time || '0')
-        count_down_title = getCountDownTitle(product.type);
-
-        function getCountDownTitle(type) {
-          if (type === 'special') {
-            return "Spezial";
-          } else if (type === 'sale') {
-            return "Sale";
-          }
-        }
-      }
-
-			$(function(){
-
-
-
-				allianceMenu(true);
-
-
-					allianceCandidatureCount(0);
-
-
-
-
-
-
-
-        tasksUpdate(0, true)
-			})
-		</script>
-
-
-
-      <div class="client-id">de03c6f9-3ed4-4938-bf07-c82302c9f453</div>
-  </body>
+    <footer>
+        <div class="footer-links">
+            <a href="#sitemap">Sitemap</a>
+            <a href="#impressum">Impressum</a>
+            <a href="#datenschutz">Datenschutz</a>
+        </div>
+        <div class="social-media-icons">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+        <p>&copy; 2023 Karnevalsverein. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
 </html>
+```
+Is this code good?
